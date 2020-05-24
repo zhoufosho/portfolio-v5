@@ -4,9 +4,9 @@ export default {
     small: 12, 
     regular: 15, 
     large: 20,
-    xlarge: 28, 
+    xlarge: 24, 
     xxlarge: 40, 
-    giant: 60,
+    giant: 70,
   },
   colors: {
     background: "white",
@@ -15,23 +15,35 @@ export default {
     accent: "#F1CDC8",
     muted: "#999999",
   },
-  space: [0, 4, 8, 16, 32, 64, 128, 256],
+  space: {
+    tiny: 5, 
+    small: 10,
+    regular: 15,
+    medium: 20,
+    large: 25, 
+    xlarge: 40,
+    huge: 100,
+    giant: 200,
+  },
   fonts: {
     body: "Karla-Regular, system-ui, sans-serif",
     heading: "Karla-Bold",
-    monospace: "PTMono, monospace"
+    monospace: "PTMono-Regular, monospace"
   },
   lineHeights: {
     body: 1.8,
-    heading: 1.25
+    heading: 1.2,
+    huge_heading: 0.95,
   },
+  breakpoints: ["40em", "52em", "64em"],
   text: {
     heading: {
       fontFamily: "heading",
       color: "primary",
-      fontSize: "xxlarge",
-      mt: 4,
-      mb: 2
+      fontSize: ["xlarge", "xxlarge", "giant"],
+      mt: "medium",
+      mb: "small",
+      lineHeight: ["heading", "huge_heading"]
     },
     subheading: {
       fontFamily: "monospace",
@@ -40,20 +52,20 @@ export default {
     },
     heading2: {
       color: "primary",
-      fontSize: "xlarge",
+      fontSize: ["large", "xlarge", "xxlarge"],
       fontFamily: "heading",
+      mb: "small",
     },
     heading3: {
       color: "primary",
-      fontSize: "large",
-      fontFamily: "heading",
+      fontSize: ["medium", "large"],
+      fontFamily: "body",
     },
     body: {
       fontFamily: "body",
-      color: "body",
       lineHeight: "body",
       fontSize: "regular",
-      mb: 3
+      mb: "small",
     },
   },
   buttons: {
