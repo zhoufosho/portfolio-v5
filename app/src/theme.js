@@ -36,6 +36,16 @@ export default {
     huge_heading: 0.95,
   },
   breakpoints: ["40em", "52em", "64em"],
+  borderRadius: {
+    small: 4,
+    medium: 10,
+    circle: "100%",
+  },
+  borderColor: {
+    muted: "muted",
+    primary: "primary",
+    accent: "accent",
+  },
   text: {
     heading: {
       fontFamily: "heading",
@@ -73,5 +83,5 @@ export default {
       color: "white",
       bg: "accent"
     }
-  }
+  },
 };

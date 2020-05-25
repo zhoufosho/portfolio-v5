@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Flex, Heading, Text, Image, Button } from "rebass";
-import { Label, Input } from '@rebass/forms'
+import { Label, Input } from "@rebass/forms"
 
 
 const FULL_WIDTH = 960;
@@ -66,12 +66,31 @@ export const Section = ({ children, ...restProps }) => {
   );
 };
 
+export const InputField = props => {
+  return (
+    <Input {...props} 
+      sx={{ 
+        border: "none",
+        lineHeight: "1.8",
+        px: 15,
+        py: 10,
+        ":focus": {
+          outline: "none",
+        }
+      }} 
+      css={{
+
+      }}/>
+  );
+};
+
 export class PrivatePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      password: '',
+      password: "",
       isAuthenticated: false,
+      showSubmit: false,
     };
   }
 
@@ -82,30 +101,40 @@ export class PrivatePage extends React.Component {
   }
 
   handleChange = (event) => {
-    this.setState({ password: event.target.value }); 
+    this.setState({ password: event.target.value });
+    this.setState({ showSubmit: event.target.value });
   }
 
-  renderPasswordInput() {
+  renderPasswordPage() {
     return (
-      <Box
-        as='form'
-        onSubmit={(event) => this.handleSubmit(event)}
-      >
-        <Input
-          id='password'
-          name='password'
-          type='password'
-          placeholder='password'
-          onChange = {(event) => this.handleChange(event) }/>
-        <Button>
-          Beep
-        </Button>
-      </Box>
+      <Section>
+        <Container>
+          <Box as="form" onSubmit={(event) => this.handleSubmit(event)}>
+            <Flex>
+              <InputField
+                id="password"
+                name="password"
+                type="password"
+                placeholder="password"
+                onChange = {(event) => this.handleChange(event) } />
+              {this.state.showSubmit && <Button 
+                  sx={{
+                    borderRadius: "circle",
+                    width: 40,
+                    height: 40,
+                  }}> 
+                  {">"} 
+                </Button>
+              }
+            </Flex>
+          </Box>
+        </Container>
+      </Section>
     );
   }
 
   render() {
     const Component = this.props.component;
-    return this.state.isAuthenticated ? <Component /> : this.renderPasswordInput()
+    return this.state.isAuthenticated ? <Component /> : this.renderPasswordPage()
   }
 }
