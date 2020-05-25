@@ -2,7 +2,7 @@
 export default {
   fontSizes: {
     small: 12, 
-    regular: 15, 
+    regular: 16, 
     large: 20,
     xlarge: 24, 
     xxlarge: 40, 
@@ -13,14 +13,14 @@ export default {
     bg_alt: "#f8f8f8",
     primary: "#333333",
     accent: "#F1CDC8",
+    secondary: "#777777",
     muted: "#999999",
   },
   space: {
     tiny: 5, 
     small: 10,
-    regular: 15,
-    medium: 20,
-    large: 25, 
+    medium: 15,
+    large: 20, 
     xlarge: 40,
     huge: 100,
     giant: 200,
@@ -29,6 +29,9 @@ export default {
     body: "Karla-Regular, system-ui, sans-serif",
     heading: "Karla-Bold",
     monospace: "PTMono-Regular, monospace"
+  },
+  fontWeight: {
+    bold: "600",
   },
   lineHeights: {
     body: 1.8,
@@ -58,24 +61,32 @@ export default {
     subheading: {
       fontFamily: "monospace",
       color: "muted",
-      fontSize: "large",
+      mb: "tiny",
     },
     heading2: {
       color: "primary",
       fontSize: ["large", "xlarge", "xxlarge"],
       fontFamily: "heading",
-      mb: "small",
+      mb: "medium",
     },
     heading3: {
       color: "primary",
       fontSize: ["medium", "large"],
       fontFamily: "body",
+      mb: "medium",
     },
     body: {
       fontFamily: "body",
       lineHeight: "body",
       fontSize: "regular",
       mb: "small",
+    },
+    footer: {
+      fontFamily: "body",
+      lineHeight: "body",
+      fontSize: "small",
+      mb: "tiny",
+      color: "secondary",
     },
   },
   buttons: {

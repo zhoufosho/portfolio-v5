@@ -7,7 +7,8 @@ function Router() {
   const pathname = window.location.pathname;
   switch (pathname) {
     case "/composer":
-      return <PrivatePage component={Composer} />
+      return <Composer />
+      // return <PrivatePage component={Composer} />
     default:
       return <Home />;
   }

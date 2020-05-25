@@ -3,7 +3,7 @@ import { Box, Flex, Heading, Text, Image, Button } from "rebass";
 import { Label, Input } from "@rebass/forms"
 
 
-const FULL_WIDTH = 960;
+const FULL_WIDTH = 1000;
 const TEMP_PW = "qwerqwer";
 
 export const Heading1 = props => {
@@ -29,10 +29,37 @@ export const Paragraph = ({ children, ...restProps }) => {
     <Text
       {...restProps}
       variant="body"
+      color="secondary"
       sx={{ "-webkit-font-smoothing": "antialiased" }}
     >
       {children}
     </Text>
+  );
+};
+
+export const Footer = ({ children, ...restProps }) => {
+  return (
+    <Text
+      {...restProps}
+      variant="footer"
+      textAlign="center"
+      width="50%"
+      mx="auto"
+      sx={{ "-webkit-font-smoothing": "antialiased" }}
+    >
+      {children}
+    </Text>
+  );
+};
+
+export const Strong = props => {
+  return (
+    <Text
+      {...props}
+      as="span"
+      color="primary"
+      fontWeight="bold"
+      sx={{ "-webkit-font-smoothing": "antialiased" }} />
   );
 };
 
@@ -44,6 +71,7 @@ export const Container = ({ children, ...restProps }) => {
         maxWidth: FULL_WIDTH,
         mx: "auto",
         px: "medium",
+        py: "large",
       }}
     >
       {children}
@@ -56,6 +84,7 @@ export const Section = ({ children, ...restProps }) => {
     <Box 
       {...restProps}
       sx={{
+        boxSizing: "content-box",
         maxHeight: "80vh",
         px: "medium",
         py: "giant",
@@ -72,8 +101,8 @@ export const InputField = props => {
       sx={{ 
         border: "none",
         lineHeight: "1.8",
-        px: 15,
-        py: 10,
+        px: "regular",
+        py: "small",
         ":focus": {
           outline: "none",
         }
@@ -110,21 +139,21 @@ export class PrivatePage extends React.Component {
       <Section>
         <Container>
           <Box as="form" onSubmit={(event) => this.handleSubmit(event)}>
-            <Flex>
+            <Flex 
+              sx={{
+                borderBottom: "1px solid",
+                borderColor: "muted",
+              }}>
               <InputField
                 id="password"
                 name="password"
                 type="password"
                 placeholder="password"
                 onChange = {(event) => this.handleChange(event) } />
-              {this.state.showSubmit && <Button 
-                  sx={{
-                    borderRadius: "circle",
-                    width: 40,
-                    height: 40,
-                  }}> 
+              {this.state.showSubmit && 
+                <Box> 
                   {">"} 
-                </Button>
+                </Box>
               }
             </Flex>
           </Box>
