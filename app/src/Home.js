@@ -14,9 +14,9 @@ const Projects = [
   },
   {
     name: "Launching & Scaling Spaces",
-    desc: "Enabling context as content scales",
+    desc: "Designing consumer and producer experiences for community & collaboration",
     color: "white",
-    image: "images/round-launched-spaces.gif",
+    image: "/images/round-launched-spaces.gif",
     url: "/spaces",
     subheading: "2018 – 2019 · Quora",
 
