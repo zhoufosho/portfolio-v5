@@ -13,7 +13,10 @@ export default {
     bg_alt: "#f8f8f8",
     primary: "#333333",
     accent: "#F1CDC8",
-    secondary: "#777777",
+    sage: "#84B7A7",
+    teal: "#1E5466",
+    purple: "#733F5D",
+    secondary: "#666666",
     muted: "#999999",
   },
   space: {
@@ -61,13 +64,13 @@ export default {
     subheading: {
       fontFamily: "monospace",
       color: "muted",
-      mb: "tiny",
+      mb: "medium",
     },
     heading2: {
       color: "primary",
       fontSize: ["large", "xlarge", "xxlarge"],
       fontFamily: "heading",
-      mb: "medium",
+      mb: "small",
     },
     heading3: {
       color: "primary",

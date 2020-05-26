@@ -1,10 +1,10 @@
 import React from "react";
-import { Box, Flex, Heading, Text, Image, Button } from "rebass";
+import { Box, Flex, Heading, Text, Image, Button, Link } from "rebass";
 import { Label, Input } from "@rebass/forms"
 
 
 const FULL_WIDTH = 1000;
-const TEMP_PW = "qwerqwer";
+const TEMP_PW = "mochi";
 
 export const Heading1 = props => {
   return <Text variant="heading" {...props} />;
@@ -52,6 +52,25 @@ export const Footer = ({ children, ...restProps }) => {
   );
 };
 
+export const SiteHeader = ({ children, ...restProps }) => {
+  return (
+    <Container>
+      <Paragraph>
+      <Link href="/" sx={{
+        ":hover": {
+          fontWeight: "bold",
+          color: "teal"
+        }
+      }}>
+      elaine
+      </Link>
+      </Paragraph>
+
+      
+    </Container>
+  );
+};
+
 export const Strong = props => {
   return (
     <Text
@@ -85,9 +104,8 @@ export const Section = ({ children, ...restProps }) => {
       {...restProps}
       sx={{
         boxSizing: "content-box",
-        maxHeight: "80vh",
         px: "medium",
-        py: "giant",
+        py: "huge",
       }}
     >
       {children}
@@ -152,7 +170,7 @@ export class PrivatePage extends React.Component {
                 onChange = {(event) => this.handleChange(event) } />
               {this.state.showSubmit && 
                 <Box> 
-                  {">"} 
+                  <Image src="/images/chevron_right.png" />
                 </Box>
               }
             </Flex>

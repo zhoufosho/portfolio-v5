@@ -1,17 +1,18 @@
 import React from 'react';
 import { Box, Button, Text, Flex, Image } from "rebass";
-import { Heading1, Subheading, Heading2, Heading3, Paragraph, Container, Section, Strong, Footer } from "./Components";
+import { Heading1, Subheading, Heading2, Heading3, Paragraph, Container, Section, Strong, Footer, SiteHeader } from "./Components";
 
 function Composer() {
   return (
     <>
+      <SiteHeader />
       <Section>
         <Container>
           <Box mt="40vh">
             <Heading2>
               Composer
             </Heading2>
-            <Box width="60%">
+            <Box width={["80%", "70%"]}>
               <Paragraph>
                 Quora's mission is to share and grow the world's knowledge. For nearly the first 
                 decade on the platform, all of the knowledge existed in the form of questions 
@@ -23,8 +24,8 @@ function Composer() {
                 and engineering infrastructure that are built into them. Instead of reusing what exists, 
                 it is easier to create new ones.
                 <br /><br />
-                In this project, I focused on creating a composer that <Strong>enables lightweight content creation</Strong>;
-                in the process we <Strong>simplified existing content types</Strong>.
+                In this project, I focused on creating a composer that <Strong>simplifies existing content types</Strong>
+                and <Strong>enables lightweight content creation</Strong>.
               </Paragraph>
             </Box>
           </Box>
@@ -33,12 +34,9 @@ function Composer() {
 
       <Section backgroundColor="bg_alt">
         <Container>
-          <Box width="75%" mx="auto">
-            <Subheading size="small">
-              Context
-            </Subheading>
+          <Box width={["100%", "85%"]} mx="auto">
             <Heading3>
-              Why design a new composer? 
+              Why a new composer? 
             </Heading3>
             <Box>
               <Paragraph>
@@ -63,8 +61,29 @@ function Composer() {
           <Box>
             <Image src="/images/composer-state.png" />
             <Footer>
-              Above: How to add three of the five possible content types from the composer. Each has a different visual style
-              and mechanics
+              Above: How to add three of the five possible content types from the composer. Each varies in visual style 
+              and mechanics, and each is owned by different teams.
+            </Footer>
+          </Box>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <Box width={["100%", "85%"]} mx="auto">
+            <Heading3>
+              The Solution: Posts and Questions 
+            </Heading3>
+            <Box>
+              <Paragraph>
+                  
+              </Paragraph>
+            </Box>
+          </Box>
+          <Box mt="large">
+            <Image src="/images/composer-question-post.png" />
+            <Footer>
+              From L to R: how to open the composer, start creating, and switch types if needed
             </Footer>
           </Box>
         </Container>
