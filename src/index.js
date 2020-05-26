@@ -4,10 +4,20 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+// Theme
+import { ThemeProvider } from "theme-ui";
+import theme from "./theme";
+
+// Fonts
+import "./fonts/Karla-Italic.ttf";
+import "./fonts/Karla-Bold.ttf";
+import "./fonts/Karla-Regular.ttf";
+import "./fonts/PTMono-Regular.ttf";
+
 ReactDOM.render(
-  <React.StrictMode>
+  <ThemeProvider theme={theme}>
     <App />
-  </React.StrictMode>,
+  </ThemeProvider>,
   document.getElementById('root')
 );
 
