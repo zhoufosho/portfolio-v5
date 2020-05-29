@@ -15,3 +15,23 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+
+
+
+@font-face {
+  font-family: "Karla-Regular";
+  font-weight: 400;
+  src: local("Karla-Regular"),
+    url(./fonts/Karla-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Karla-Bold";
+  font-weight: 600;
+  src: local("Karla-Bold"), url(./fonts/Karla-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "PTMono-Regular";
+  font-weight: 500;
+  src: local("PTMono-Regular"),
+    url(./fonts/PTMono-Regular.ttf) format("truetype");
+}
