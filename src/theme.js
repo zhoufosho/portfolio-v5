@@ -30,7 +30,7 @@ export default {
   },
   fonts: {
     body: "Karla-Regular, system-ui, sans-serif",
-    heading: "Karla-Bold",
+    heading: "Karla-Bold, system-ui, sans-serif",
     monospace: "PTMono-Regular, monospace"
   },
   fontWeight: {
