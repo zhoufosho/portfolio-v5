@@ -10,7 +10,7 @@ function Composer() {
         <Container>
           <Box mt="40vh">
             <Heading2>
-              Composer
+              Simplifying content creation
             </Heading2>
             <Box width={["80%", "70%"]}>
               <Paragraph>
@@ -24,7 +24,7 @@ function Composer() {
                 and engineering infrastructure that are built into them. Instead of reusing what exists, 
                 it is easier to create new ones.
                 <br /><br />
-                In this project, I focused on creating a composer that <Strong>simplifies existing content types</Strong>
+                In this project, I focused on creating a composer that <Strong>simplifies existing content types </Strong>
                 and <Strong>enables lightweight content creation</Strong>.
               </Paragraph>
             </Box>
@@ -88,6 +88,24 @@ function Composer() {
           </Box>
         </Container>
       </Section>
+
+
+      - Back to basics 
+
+      Reducing content types 
+      Instead of supporting bespoke content types and building out, I optimized for 
+
+
+      The new composer defaults to showing plaintext and adding images
+
+
+      - Flexibility 
+      
+
+      - Measuring Success 
+
+
+
     </>
   );
 }
