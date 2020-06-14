@@ -41,7 +41,7 @@ function Spaces() {
               <Paragraph>
                 Quora promises the "best answer to any question". As the 
                 product has scaled to 300M+ monthly active uniques across 
-                hundreds of countries and languages, it has become harder to 
+                hundreds of countries and dozens of languages, it has become harder to 
                 understand the subtext and expectations behind a question. 
 
                 <ul>
@@ -114,7 +114,14 @@ function Spaces() {
                   <li><Strong>Contributor</Strong> - can post without approval
                   </li>
                 </ul>
-              </Paragraph>
+              </Paragraph>           
+            </Box>
+            <Box width={["85%", "70%"]} mx="auto">
+              <Image src="/images/cred-and-badges.png" />   
+              <Footer>
+                Left: Badges for admins and moderators give reputation to the author<br />
+                Right: Customizable space credibility allows for more granular expression
+              </Footer>
             </Box>
           </Box>
         </Container>
@@ -128,9 +135,20 @@ function Spaces() {
             </Heading3>
             <Box>
               <Paragraph>
-                
+                  Prior to Spaces, Quora users rarely received any notifications – most engagement came in the form of receiving and reading Digest emails.   
+                  Only 6% of users receive on average more than one notif per week
               </Paragraph>
             </Box>
+          </Box>
+          <Box>
+            <Flex alignSelf="center">
+              <Box><Image src="/images/notif-picker.png" /></Box>
+              <Box><Image src="/images/feed-sort.png" /></Box>
+            </Flex>
+            <Footer>
+              Left: By default, users are opted into highlight notifs trained by machine learning models<br />
+              Right: By default, the Top sort surfaces the best stories first. Users can change their default to Recent sort for real-time updates
+            </Footer>
           </Box>
         </Container>
       </Section>
@@ -164,82 +182,6 @@ function Spaces() {
           </Box>
         </Container>
       </Section>
-
-      Roles
-      - User research 
-      - Visual and interaction design 
-      - Front-end development 
-
-      Timeline 
-      Feb 2018 – present
-
-      Team 
-      Kelvin Ho (product manager)
-      Alex Francis (product manager)
-      Jessie Duan (engineering manager)
-      Ioana Tamas (product engineer)
-      Pam Anderson (product engineer)
-      Howard Bai (product engineer)
-      Raymond Yin (product engineer)  
-      Diana Gerr (product designer)
-      Abhinav Sharma (product designer)
-      Yuanchen Jiang (brand designer)
-      Yin-han Wang (user researcher)
-
-
-
-      - User-defined boundaries 
-
-      Roles & Permissions
-
-      Admin Controls 
-
-      Scoped to Space 
-
-
-      - Flexible
-
-      Design for supporting a range of scales and use-cases: single-author blogs, 
-      multi-contributor forums, mini quoras centered around q&a, 
-      collections of answers, and more. 
-
-      Enabling various content types 
-      Instead of supporting bespoke content types and building out, I optimized for 
-
-      Granular Settings
-
-      Easy Defaults 
-
-
-      - Engaging 
-
-      Notifications and feed
-
-      The rest of Quora focuses on utilizing email and SEO as drivers, meaning
-
-
-      Emojis, gifs, and more! 
-
-      Distinct identity
-
-      *** FEATURES ***
-
-      - Roles & Permissions: 
-        - Admins / Moderators
-        - Space Credentials 
-
-      - Notifications & Feed: prioritizing real-time content
-        - Personalized notifications 
-        - 
-        - Clickthrough experience
-
-      - Submissions: accepting content from more people 
-
-      - Suggestions: sharing from other content sources 
-
-
-
-      - Measuring Success 
     </>
   );
 }

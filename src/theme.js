@@ -1,7 +1,7 @@
 // example theme.js
 export default {
   fontSizes: {
-    small: 12, 
+    small: 13, 
     regular: 16, 
     large: 20,
     xlarge: 24, 
@@ -65,6 +65,7 @@ export default {
       fontFamily: "monospace",
       color: "muted",
       mb: "medium",
+      lineHeight: "1.4",
     },
     heading2: {
       color: "primary",

@@ -61,8 +61,8 @@ function Composer() {
           <Box>
             <Image src="/images/composer-state.png" />
             <Footer>
-              Above: How to add three of the five possible content types from the composer. Each varies in visual style 
-              and mechanics, and each is owned by different teams.
+              Above: How to add three of the five possible content types from the composer. <br />
+              Each varies in visual style and mechanics, and each is owned by different teams.
             </Footer>
           </Box>
         </Container>
@@ -88,24 +88,6 @@ function Composer() {
           </Box>
         </Container>
       </Section>
-
-
-      - Back to basics 
-
-      Reducing content types 
-      Instead of supporting bespoke content types and building out, I optimized for 
-
-
-      The new composer defaults to showing plaintext and adding images
-
-
-      - Flexibility 
-      
-
-      - Measuring Success 
-
-
-
     </>
   );
 }

@@ -43,7 +43,7 @@ export const Footer = ({ children, ...restProps }) => {
       {...restProps}
       variant="footer"
       textAlign="center"
-      width="50%"
+      width="80%"
       mx="auto"
       sx={{ "-webkit-font-smoothing": "antialiased" }}
     >
