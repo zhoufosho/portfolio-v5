@@ -112,7 +112,7 @@ function Spaces() {
               <Paragraph>
                 After multiple failed experiments and prototypes ranging from: a groups product
                 with only questions and answers, a product with a system-defined boundary (e.g. the topic page),
-                and a groups product with no questions, only posts, we determined the best way forward was to create
+                and a groups product with only posts, we determined the best way forward was to create
                 a product where users decide where the boundaries were. 
               </Paragraph>
             </Flex>
@@ -242,9 +242,8 @@ function Spaces() {
               <Box><Image src="/images/feed-sort.png" /></Box>
             </Flex>
             <Footer>
-              Left: By default, users are opted into highlight notifs trained by machine learning models<br />
-              Right: By default, the Top sort surfaces what our heuristics think the best stories are. 
-              Users can change their default to Recent sort for real-time updates
+              Left: By default, users receive highlight notifs trained by machine learning models. Users can change their notification frequency.<br />
+              Right: By default, the Top sort surfaces the best content based on audience votes. Users can change their default to Recent for real-time updates
             </Footer>
           </Box>
         </Container>
@@ -314,7 +313,7 @@ function Spaces() {
         </Container>
       </Section>
 
-      <Section>
+      <Section backgroundColor="bg_alt">
         <Container>
           <Box width={["100%", "85%"]} mx="auto">
             <Heading3> 
