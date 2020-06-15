@@ -81,7 +81,7 @@ function Composer() {
             </Box>
           </Box>
           <Box mt="large">
-            <Image src="/images/composer-question-post.png" />
+            <Image src="/images/composer-final.png" />
             <Footer>
               From L to R: how to open the composer, start creating, and switch types if needed
             </Footer>

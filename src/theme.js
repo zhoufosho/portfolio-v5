@@ -5,7 +5,7 @@ export default {
     regular: 16, 
     large: 20,
     xlarge: 24, 
-    xxlarge: 40, 
+    xxlarge: 32, 
     giant: 70,
   },
   colors: {

@@ -43,7 +43,7 @@ export const Footer = ({ children, ...restProps }) => {
       {...restProps}
       variant="footer"
       textAlign="center"
-      width="80%"
+      width={["100%", "80%"]}
       mx="auto"
       sx={{ "-webkit-font-smoothing": "antialiased" }}
     >
@@ -78,6 +78,17 @@ export const Strong = props => {
       as="span"
       color="primary"
       fontWeight="bold"
+      sx={{ "-webkit-font-smoothing": "antialiased" }} />
+  );
+};
+
+export const Italic = props => {
+  return (
+    <Text
+      {...props}
+      as="span"
+      color="primary"
+      fontStyle='italic'
       sx={{ "-webkit-font-smoothing": "antialiased" }} />
   );
 };

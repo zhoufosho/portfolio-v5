@@ -4,8 +4,8 @@ import { Heading1, Subheading, Heading2, Heading3, Paragraph, Container, Section
 
 const Projects = [
   {
-    name: "Composer",
-    desc: "Making content creation simple and lightweight",
+    name: "Simplifying Content Creation",
+    desc: "Reducing complexity and enabling lightweight content",
     color: "accent",
     image: "/images/rounded-composer.png",
     url: "/composer",
