@@ -23,7 +23,10 @@ function Spaces() {
                 in order  to support more contextual interactions. Once we felt 
                 confident in a product direction, we <Strong>launched a communities product </Strong>
                 in late 2018. Since then, our team has been focusing on
-                <Strong> scaling content generation</Strong>.
+                <Strong> scaling content generation</Strong>. 
+                <br /><br />
+                Since this project has spanned multiple teams and quarters, below I will highlight 
+                some of the key projects and product areas that I was most heavily involved in.
               </Paragraph>
             </Box>
           </Box>
@@ -87,6 +90,16 @@ function Spaces() {
               </Paragraph>
             </Box>
           </Box>
+          <Box>
+            <Flex>
+            <Box mr="large"><Image src="/images/math-topic-page.png" /></Box>
+            <Box><Image src="/images/math-spaces.png" /></Box>
+            </Flex>
+            <Footer>
+              Left: Before, no division of different contexts and audiences on Mathematics topic page<br />
+              Right: After, various Spaces defining their own context within Mathematics
+            </Footer>
+          </Box>
         </Container>
       </Section>
 
@@ -136,7 +149,7 @@ function Spaces() {
             <Box>
               <Paragraph>
                   Prior to Spaces, Quora users rarely received any notifications – most engagement came in the form of receiving and reading Digest emails.   
-                  Only 6% of users receive on average more than one notif per week
+                  Only 6% of users receive on average more than one notif per week. 
               </Paragraph>
             </Box>
           </Box>
@@ -172,13 +185,24 @@ function Spaces() {
         <Container>
           <Box width={["100%", "85%"]} mx="auto">
             <Heading3> 
-              Suggestions: augmenting from other content sources 
+              Suggestions: Augmenting Content from Other Sources
             </Heading3>
             <Box>
               <Paragraph>
-                
+                One of the biggest painpoints we heard over and over was that it was difficult to 
+                find content to add to spaces. With Suggestions, we tackled th
               </Paragraph>
             </Box>
+          </Box>
+          <Box>
+            <Flex alignSelf="center">
+              <Box><Image src="/images/suggestions-answer.png" /></Box>
+              <Box><Image src="/images/suggestions-link.png" /></Box>
+            </Flex>
+            <Footer>
+              Left: With answer suggestions, users can find existing content on Quora to share to their space<br />
+              Right: With link suggestions, users can connect RSS feeds to their space and share links
+            </Footer>
           </Box>
         </Container>
       </Section>
