@@ -106,16 +106,35 @@ function Spaces() {
         <Container>
           <Box width={["100%", "85%"]} mx="auto">
             <Heading3>
-              Spaces: User-Defined Channels and Communities  
+              The Solution: Spaces (aka User-Defined Channels and Communities)
             </Heading3>
-            <Flex>
-              <Paragraph>
-                After multiple failed experiments and prototypes ranging from: a groups product
-                with only questions and answers, a product with a system-defined boundary (e.g. the topic page),
-                and a groups product with only posts, we determined the best way forward was to create
-                a product where users decide where the boundaries were. 
+            <Paragraph>
+              Before deciding to build a new product, there was an exploratory effort that spun up a bunch of potential ideas and solutions. 
+              These ideas included:
+              <ul>
+                <li>Ranking-only solutions: Leverage machine learning to automatically assemble people who can answer it 
+                (e.g. automatically group scientists so you can request answers from Scientists)
+                </li>
+                <li>Q&A-based Groups product: Use existing question and answer infrastructure and only certain people can ask or answer them</li>
+                <li>Re-imagining existing "boundaries" (e.g. topic page): Re-use existing follow graphs to redraw and enforce shared norms </li>
+              </ul> 
+              Through these various prototypes and ideas, we determined the best way forward was none of these. Instead, we needed to create
+              a product where users decide where the boundaries were. Hence, we ended up building Spaces.
               </Paragraph>
-            </Flex>
+          </Box>
+          <Box mb="huge" mt="large">
+            <Box mb="medium"><Image src="/images/space-anatomy.png" /></Box>
+            <Footer>
+              Above: Anatomy of a space with general characteristics<br />
+            </Footer>
+          </Box>
+          <Box width={["100%", "85%"]} mx="auto">
+            <Paragraph>
+              Although we initially imagined Spaces to be for an explicit groups/community use case, we realized that these same boundary problems
+              existed for all types of readers and writers, and that some variation of Spaces could help them achieve their goals of sharing
+              knowledge more effectively. <br /><br />
+              We designed Spaces to be flexible to a variety of use cases and scales. Here are some examples of Spaces that exist today –
+            </Paragraph>
           </Box>
           <Box mb="huge">
             <Box mb="medium"><Image src="/images/space-sampling.png" /></Box>
@@ -137,7 +156,7 @@ function Spaces() {
             <Box>
               <Paragraph>
                 Spaces intend to bring together a group of people towards a common 
-                goal. Teams tend to function better if there are clearly defined
+                goal. These groups of people tend to coordinate better if there are clearly defined
                 roles, and we set out to create those in the product. 
                 <ul>
                   <li><Strong>Owner</Strong> - can invite and remove all other roles (including admins), 
