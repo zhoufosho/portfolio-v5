@@ -109,14 +109,14 @@ function Spaces() {
               The Solution: Spaces (aka User-Defined Channels and Communities)
             </Heading3>
             <Paragraph>
-              Before deciding to build a new product, there was an exploratory effort that spun up a bunch of potential ideas and solutions. 
-              These ideas included:
+              Before deciding to build a new product, we started on an exploratory effort to understand and prototype a wide variety of
+              of potential solutions. These ideas taught us a lot about the problem space and what solutions could and could not work.<br /><br />
+              Some highlighted ideas include: 
               <ul>
                 <li>Ranking-only solutions: Leverage machine learning to automatically assemble people who can answer it 
-                (e.g. automatically group scientists so you can request answers from Scientists)
-                </li>
+                (e.g. automatically group scientists so you can request answers from Scientists)</li>
                 <li>Q&A-based Groups product: Use existing question and answer infrastructure and only certain people can ask or answer them</li>
-                <li>Re-imagining existing "boundaries" (e.g. topic page): Re-use existing follow graphs to redraw and enforce shared norms </li>
+                <li>Re-imagining existing "boundaries" (e.g. topic page): Re-use existing interest-based follow graphs to redraw and enforce shared norms </li>
               </ul> 
               Through these various prototypes and ideas, we determined the best way forward was none of these. Instead, we needed to create
               a product where users decide where the boundaries were. Hence, we ended up building Spaces.
@@ -131,9 +131,9 @@ function Spaces() {
           <Box width={["100%", "85%"]} mx="auto">
             <Paragraph>
               Although we initially imagined Spaces to be for an explicit groups/community use case, we realized that these same boundary problems
-              existed for all types of readers and writers, and that some variation of Spaces could help them achieve their goals of sharing
-              knowledge more effectively. <br /><br />
-              We designed Spaces to be flexible to a variety of use cases and scales. Here are some examples of Spaces that exist today –
+              existed for many other types of readers and writers (e.g. someone trying to start a brand, or curate existing content). 
+              We found that some variation of Spaces could help them achieve their goals of sharing knowledge more effectively. <br /><br />
+              Our goal is for Spaces to be flexible to a variety of use cases and scales. Here are some examples of Spaces that exist today –
             </Paragraph>
           </Box>
           <Box mb="huge">
