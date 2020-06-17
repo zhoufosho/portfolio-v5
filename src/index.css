@@ -16,6 +16,9 @@ a {
 	color: inherit;
 }
 
+li {
+  margin-bottom: 10px;
+}
 
 
 @font-face {

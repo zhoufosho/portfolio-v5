@@ -1,6 +1,9 @@
 import React from 'react';
-import { Box, Button, Text, Flex, Image } from "rebass";
-import { Heading1, Subheading, Heading2, Heading3, Paragraph, Container, Section, Strong, Footer, SiteHeader } from "./Components";
+import { Box, Button, Text, Flex, Image, Link } from "rebass";
+import { Heading1, Subheading, Heading2, Heading3, 
+  Paragraph, Container, Section, Strong, Footer, SiteHeader,
+  StyledLink
+} from "./Components";
 
 function Composer() {
   return (
@@ -18,11 +21,12 @@ function Composer() {
                 decade on the platform, all of the knowledge existed in the form of questions 
                 and answers. 
                 <br /><br />
-                With the launch of Spaces and a new engagement strategy, it was becoming evident that 
-                our historical focus on Q&A and long-form content was limiting our growth. At Quora, 
-                content types are very difficult to change because of all the ranking 
+                With the launch of <StyledLink href="/spaces">Spaces</StyledLink> and a new engagement strategy, it was becoming evident that 
+                our historical focus on Q&A and long-form content was limiting our growth. 
+                At Quora, content types are very difficult to change because of all the ranking 
                 and engineering infrastructure that are built into them. Instead of reusing what exists, 
-                it is easier to create new ones.
+                it is easier to create new ones – this created an explosion of content
+                types that made it difficult for users to understand for us to maintain.
                 <br /><br />
                 In this project, I focused on creating a composer that <Strong>simplifies existing content types </Strong>
                 and <Strong>enables lightweight content creation</Strong>.
@@ -40,16 +44,26 @@ function Composer() {
             </Heading3>
             <Box>
               <Paragraph>
-                The composer is usually a reflection of company priorities and its quirks are often symptomatic of deep-seeded design decisions.
-                What was the existing state? 
+                The original motivation for working on the composer was to make content creation more lightweight. 
+                Lightweight, meaning easier to add shorter posts and image-based content. In the current world, 
+                adding an image required 3 clicks and every post required a title and a body. 
+                <br /><br />
+                However, it is not immediately clear how to make image adding easier. What was the existing state of content types? 
                 <ol>
+                  <li><Strong>Confusing content types</Strong>
+                    <br />
+                    Each content type has its own rules and they are not mutually exclusive. For example, you can add a link to a post
+                    or add a link by itself. They have different rules, render differently, and it was not clear to users when to use each type. 
+                  </li>
                   <li><Strong>Too many types constantly slowed us down</Strong>
                     <br />
-                      When I started this project, there were 5 distinct content types. Whenever we wanted to change or add something,
-                      we had to design it for five distinct cases, and build it in those five places.
+                      When I started this project, there were four distinct content types. Whenever we wanted to change or add something,
+                      we had to design it, build it, and rank it four times.
                   </li>
-                  <li><Strong>Formal, long-form content increases barrier to contribute</Strong>
+                  <li><Strong>Bias towards formal, long-form content</Strong>
                     <br />
+                    Quora's emphasis has always been on long-form content, questions, and answers. However, with higher context of people
+                    contributing within Spaces – we should allow shorter, easier to produce content to thrive. 
                     Asking and answering questions on Quora is already relatively intimidating – 
                     now there is added complexity with users needing to understand the difference between a question, a post, 
                     a link, a share, and an answer, and the rules for each of them.
@@ -72,7 +86,7 @@ function Composer() {
         <Container>
           <Box width={["100%", "85%"]} mx="auto">
             <Heading3>
-              The Solution: Posts and Questions 
+              The Solution: Leveraging Posts
             </Heading3>
             <Box>
               <Paragraph>
@@ -85,6 +99,68 @@ function Composer() {
             <Footer>
               From L to R: how to open the composer, start creating, and switch types if needed
             </Footer>
+          </Box>
+          <Box width={["100%", "85%"]} mx="auto">
+            <Paragraph>
+              <Strong>Consolidating posts and links</Strong>
+            </Paragraph>
+            <Paragraph>
+              <Strong>De-emphasizing formatting</Strong>
+            </Paragraph>
+            <Paragraph>
+              <Strong>Allowing posts without titles</Strong>
+            </Paragraph>
+            <Paragraph>
+              <Strong>Easier image adding</Strong>
+            </Paragraph>
+          </Box>
+        </Container>
+      </Section>
+
+      <Section backgroundColor="bg_alt">
+        <Container>
+          <Box width={["100%", "85%"]} mx="auto">
+            <Heading3>
+              Other Explorations
+            </Heading3>
+            <Box>
+              <Paragraph>
+                  
+              </Paragraph>
+            </Box>
+          </Box>
+          <Box mt="large" mx="auto" width="75%">
+            <Image src="/images/option-select-composer.png" />
+            <Footer>
+              Above: Consolidating entrypoints and allowing user to choose a type <br />
+              However, this does not scale to more types and creates friction
+              in figuring out which one to add.
+            </Footer>
+          </Box>
+          <Box mt="huge">
+            <Image src="/images/composer-single-entrypoint.png" />
+            <Footer>
+              Above: Tap-to-start-typing reduces cognition overload from having to choosing a type. <br />
+              However, forcing everything to be oriented around a title creates confusion on what is a title vs body
+            </Footer>
+          </Box>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <Box width={["100%", "85%"]} mx="auto">
+            <Heading3>
+              Future Work: Bringing Q&A-like Dynamics to Posts
+            </Heading3>
+            <Box>
+              <Paragraph>
+                  
+              </Paragraph>
+            </Box>
+          </Box>
+          <Box mt="large">
+            
           </Box>
         </Container>
       </Section>

@@ -194,12 +194,10 @@ function Spaces() {
           </Box>
           <Box mt="large">
             <Flex alignSelf="center">
-              <Box><Image src="/images/question-context.png" /></Box>
-              <Box><Image src="/images/questions-in-space.png" /></Box>
+              <Box width="60%" mx="auto"><Image src="/images/questions-in-space.png" /></Box>
             </Flex>
             <Footer>
-              Left: Before, askers must specify details of their question so it can be understood by others<br />
-              Right: Now, the Space provides context – the questions are specific to the video game Red Dead Rodeo (and not, e.g. in real life)
+              Above: Now, the Space provides context – the questions are specific to the video game Red Dead Rodeo (and not, e.g. in real life)
             </Footer>
           </Box>
           <Box mt="large">

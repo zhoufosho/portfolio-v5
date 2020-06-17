@@ -71,6 +71,20 @@ export const SiteHeader = ({ children, ...restProps }) => {
   );
 };
 
+export const StyledLink = ({ children, ...restProps }) => {
+  return (
+    <Link href="/" sx={{
+      "text-decoration": "underline",
+      ":hover": {
+        fontWeight: "bold",
+        color: "teal"
+      }
+    }}>
+      {children}
+    </Link>
+  );
+};
+
 export const Strong = props => {
   return (
     <Text
