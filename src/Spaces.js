@@ -34,19 +34,18 @@ function Spaces() {
               </Box>
               <Box ml="large" width={["100%", "30%"]}>
                 <Text variant="subtext">
-                  Timeline: 2018 – 2019 <br /><br />
                   I’ve been leading product design (vision, design, scoping, building) on Spaces since 2018, with projects
                   in between. <br /><br />
-                  We started with a small scrappy 5-person team (2 engineers, 2 designers, 1 PM, 
-                  1 data scientist) to launch the product. During this time, I was responsible for 
-                  problem exploration through prototypes, determining what features to build, 
-                  designing and building in code the prototype that we eventually launched, managing design 
+                  In 2018, we started with a 5-person team (2 engineers, 2 designers, 1 PM, 
+                  1 data scientist). I was responsible for 
+                  problem exploration, determining what direction to take our prototypes in, 
+                  designing and coding the final prototype that we launched, managing design 
                   work, and cross-functional coordination and alignment. 
                   <br /><br />
-                  Post launch, Spaces has been integrated into the Core product team, where I have been working 
-                  with a larger team of 5-8 engineers, 2-3 designers, 1-2 PMs, and 3 data scientists. I am 
-                  responsible for identifying opportunities for design, 
-                  maintaining cross-functional coordination, alignment and output, and some UI/product work.
+                  Post launch in late 2018, Spaces has been integrated into the Core product team, where I have been working 
+                  with a larger team of 5-8 engineers, 2-3 designers, 1-2 PMs, and 3 data scientists. I have been  
+                  responsible for identifying opportunities for design impact, 
+                  maintaining cross-functional coordination, alignment, and output, and some IC work.
                 </Text>
               </Box>
             </Flex>
@@ -315,26 +314,33 @@ function Spaces() {
                 <Paragraph>
                   Unlike most groups products, Spaces has very strong in-/out- group dynamics. 
                   After launching, I realized the restriction on content contribution was one of the 
-                  biggest bottlenecks for growth. 
+                  biggest bottlenecks for growth.
                   <br /><br />
                   I identified the opportunity to tackle the question:
-                  how might we <Strong>enable more people to contribute</Strong>?
+                  how might we <Strong>enable more people to contribute</Strong> while maintaining 
+                  boundaries and trust of the Space community? 
                   <br /><br />
-                  In late 2018, I led a small team of 1 other designer and 2 engineers to launch an 
-                  MVP of the product. With the launch of Submissions, our goals were:
+                  In late 2018, I led a small team of 1 other designer and 2 engineers to launch 
+                  Submissions for Spaces. With submissions, anyone can submit content to the space. 
+                  Once the submission is approved, this content appears in the space and is eligible to be sent 
+                  in notifications. 
+                  <br /><br />
+                  By launching of Submissions, our goals were: 
                   <ul>
                     <li>Increase content added to Spaces </li>
-                    <li>Long term, increase number of contributors per Space </li>
+                    <li>Enable more people to contribute to Spaces </li>
+                    <li>Long term, increase number of regular contributors to Spaces </li>
                     <li>Enable moderators and admins to find more engaged and qualified contributors </li>
                   </ul>
                 </Paragraph>
                 </Box>
-                <Box ml="large"><Image src="/images/submissions.png" /></Box>
+                <Box>
+                  <Box ml="large"><Image src="/images/submissions.png" /></Box>
+                  <Footer>
+                    Above: admin/moderator view for handling submissioins
+                  </Footer>
+                </Box>
             </Flex>
-            <Footer>
-              Above: Followers can submit content to the space. Once the submission is approved, <br />this content 
-              appears in the space and is eligible to be sent in notifications. 
-            </Footer>
           </Box>
         </Container>
       </Section>
@@ -367,15 +373,16 @@ function Spaces() {
                 #### Image of publisher spaces ####
 
                 <br /><br />
-                We kept running into the problem of <Strong>helping contributors find content to add to Spaces </Strong> 
-                without having to hunt across the internet. Fortunately, we had a giant respository 
-                of content in the form of answers on Quora. <br /><br />
-
-                In mid/late 2019, our team was exploring the same framework of suggesting content – 
-                expanding from RSS links to suggesting answers. Turns out it was pretty expandable! 
+                An ongoing challenge for Spaces was: how might we <Strong>help contributors find content 
+                to add to Spaces</Strong> without having to hunt across the internet? 
+                <br /><br />
+                In mid/late 2019, we decided to leverage the giant repository of answers on Quora, 
+                and provide our users with a list of suggested answers to share. To implement this quickly, 
+                we realized the RSS feature could be expanded to include answer sharing. 
                 I guided product direction using the framework and principles I had previously established 
-                to help the team of 1 PM and 1 engineer launch answer suggestions.<br /><br />
-                With Suggestions, we hoped to:
+                to help the team of 1 PM and 1 engineer launch answer suggestions.
+                <br /><br />
+                Our goals with Suggestions were:
                 <ul>
                   <li>Reduce friction of sharing content from on- and off-Quora by integrating it into the product</li>
                   <li>Increase ease of curation by suggesting answers that our machine learning models think are share-worthy </li>
