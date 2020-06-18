@@ -249,20 +249,12 @@ function Spaces() {
             </Box>
           </Box>
           <Box mt="large">
-            <Flex alignSelf="center">
-              <Box width="60%" mx="auto"><Image src="/images/questions-in-space.png" /></Box>
-            </Flex>
-            <Footer>
-              Above: Now, the Space provides context – the questions are specific to the video game Red Dead Rodeo (and not, e.g. in real life)
-            </Footer>
-          </Box>
-          <Box mt="large">
-            <Flex alignSelf="center">
-              <Box><Image src="/images/space-question-stories.png" /></Box>
+            <Flex>
+              <Box alignSelf="center" width="100%"><Image src="/images/questions-in-space.png" /></Box>
               <Box><Image src="/images/space-question-page.png" /></Box>
             </Flex>
             <Footer>
-              Left: How questions appear in home feed (left) and on the space page (right) <br />
+              Left: Now the Space provides context – the questions are specific to the video game Red Dead Rodeo (and not hunting in real life)<br />
               Right: Question followers only get answers written by space contributors or approved by space moderators
             </Footer>
           </Box>
@@ -333,6 +325,9 @@ function Spaces() {
                     <li>Enable moderators and admins to find more engaged and qualified contributors </li>
                   </ul>
                 </Paragraph>
+                <Paragraph>
+                <Strong>Impact</Strong>: ~25% of spaces content today comes from Submissions
+                </Paragraph>
                 </Box>
                 <Box>
                   <Box ml="large"><Image src="/images/submissions.png" /></Box>
@@ -387,6 +382,7 @@ function Spaces() {
                   <li>Reduce friction of sharing content from on- and off-Quora by integrating it into the product</li>
                   <li>Increase ease of curation by suggesting answers that our machine learning models think are share-worthy </li>
                 </ul>
+                <Strong>Impact</Strong>: ~19% of spaces content today comes from Suggestions
                 <br /><br />
               </Paragraph>
             </Box>

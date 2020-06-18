@@ -38,7 +38,7 @@ function Home() {
       <Section pt="40vh">
         <Container>
           <Heading1>i like humans & <br /> solving their problems</Heading1>
-          <Heading3 color="muted">elaine zhou · product designer @quora </Heading3>
+          <Heading3 color="muted">elaine zhou · product design lead @quora </Heading3>
         </Container>
       </Section>
       

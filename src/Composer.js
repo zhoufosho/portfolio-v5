@@ -59,10 +59,12 @@ function Composer() {
             <Box>
               <Paragraph>
                 The original motivation for working on the composer was to make content creation more lightweight. 
-                Lightweight, meaning easier to add shorter posts and image-based content. In the current world, 
-                adding an image required 3 clicks and every post required a title and a body. 
+                What does it mean to be lightweight? Currently, adding an image requires 3 clicks 
+                and every post requires both a title and a body. 
+                In this vein, lightweight means making it easier to add short posts and image-based content.
                 <br /><br />
-                However, it is not immediately clear how to make image adding easier. What was the existing state of content types? 
+                However, it is not clear how to add images and short posts. 
+                What was the existing state of content types? 
                 <ol>
                   <li><Strong>Confusing content types</Strong>
                     <br />
@@ -71,8 +73,9 @@ function Composer() {
                   </li>
                   <li><Strong>Too many types constantly slowed us down</Strong>
                     <br />
-                      When I started this project, there were four distinct content types. Whenever we wanted to change or add something,
-                      we had to design it, build it, and rank it four times.
+                      At the start of this project, there were four distinct content types. 
+                      Whenever we wanted to change or add something,
+                      we had to design it, build it, and figure out ML models four times.
                   </li>
                   <li><Strong>Bias towards formal, long-form content</Strong>
                     <br />
@@ -104,6 +107,14 @@ function Composer() {
             </Heading3>
             <Box>
               <Paragraph>
+                The final solution I show below 
+                <br /><br />
+                I oriented my solution towards: 
+                <ul>
+                  <li>Fewer, more flexible content types</li>
+                  <li>Reducing requirements </li>
+                  <li>Reducing friction: removing clicks to start creating, removing clicks to create what you want</li>
+                </ul>
                   
               </Paragraph>
             </Box>
@@ -114,24 +125,113 @@ function Composer() {
               From L to R: how to open the composer, start creating, and switch types if needed
             </Footer>
           </Box>
-          <Box width={["100%", "85%"]} mx="auto">
-            <Paragraph>
-              <Strong>Consolidating posts and links</Strong>
-            </Paragraph>
-            <Paragraph>
-              <Strong>De-emphasizing formatting</Strong>
-            </Paragraph>
-            <Paragraph>
-              <Strong>Allowing posts without titles</Strong>
-            </Paragraph>
-            <Paragraph>
-              <Strong>Easier image adding</Strong>
-            </Paragraph>
-          </Box>
         </Container>
       </Section>
-
       <Section backgroundColor="bg_alt">
+        <Container>
+          <Box width={["100%", "85%"]} mx="auto" mt="huge">
+            <Heading3>
+            Design Decisions & Details
+            </Heading3>
+            <Subheading mt="large">Consolidating posts and links</Subheading>
+            <Paragraph>
+              Previously, because you could add links to posts, it was very confusing to 
+              users when to compose the Link type versus the Post type. There are some 
+              engineering constraints where we still want to keep the technical infrastructure for 
+              links. <br /><br />
+              I designed the link adding experience of Posts to be similar to that of Links, essentially 
+              keeping them to be one unified experience in the front-end, even if the backend is different.
+              <br />
+            </Paragraph>
+          </Box>
+          <Box mb="small">
+            <Flex>
+              <Box mr="large"><Image src="/images/post-and-link.png" /></Box>
+              <Box ml="large"><Image src="/images/consolidated-post.png" /></Box>
+            </Flex>
+            <Footer>
+              Left: You can create the same content in two different ways with different experiences <br />
+              Right: Solution to consolidate Link and Post experiences
+            </Footer>
+          </Box>
+          <Box width={["100%", "85%"]} mx="auto" mt="huge">
+            <Subheading>
+              De-emphasizing formatting
+            </Subheading>
+            <Paragraph>
+              Because Quora centered on long-form content, there was often a need to add formatting 
+              in order to break up text into more legible chunks. On desktop and mobile web (not pictured), 
+              we show the formatting options by default! When creating shorter content, having these formatting options 
+              may distract from writing or nudge people towards creating longer content that is necessary. 
+              <br /><br />
+              In my solution, I combined all formatting into one menu and behind a click, so the focus is on the 
+              content itself.
+              <br />
+            </Paragraph>
+          </Box>
+          <Box>
+            <Flex>
+              <Box mr="small"><Image src="/images/original-toolbar.png" /></Box>
+              <Box><Image src="/images/composer-toolbar.png" /></Box>
+            </Flex>
+            <Footer>
+              Left: original editor toolbar with two different formatting menus<br />
+              Right: solution to combine all formatting into one menu
+            </Footer>
+          </Box>
+          <Box width={["100%", "85%"]} mx="auto" mt="huge">
+            <Subheading>
+              Default to adding posts without titles
+            </Subheading>
+            <Flex>
+              <Box mr="large">
+                <Paragraph>
+                  Having a title makes content feel more formal and that friction may reduce content added. 
+                  However, we don't want to remove titles in the product. For example, there are 
+                  Spaces that are effectively used as blogs, for which it is important to allow adding a title. 
+                  <br /><br />
+                  Here, I tried de-emphasizing the importance of titles, but still providing a way to add titles 
+                  when needed.
+                </Paragraph>
+              </Box>
+              <Box width="95%" ml="large"><Image src="/images/title-adding.png" /></Box>
+            </Flex>
+          </Box>
+          <Box width={["100%", "85%"]} mx="auto" mt="huge">
+            <Subheading>
+              Easier image handling
+            </Subheading>
+            <Paragraph>
+              As part of improving the ability to add images, I also updated the interaction to remove images. 
+              Previously, it took 3 clicks after opening the composer to add an image – crazily enough, we saw an increase 
+              in spaces content that was purely image-based! Despite this friction, there was demand for easier image adding. 
+              The old editor also used desktop-based metaphors like selecting and hitting delete to remove an image. 
+              <br /><br />
+              In my solution, I used a close button and added an image gallery to support add images with one-click.
+            </Paragraph>
+          </Box>
+          <Box>
+            <Flex>
+              <Box mr="medium"><Image src="/images/old-image-adding.png" /></Box>
+              <Box><Image src="/images/image-adding.png" /></Box>
+            </Flex>
+            <Footer mt="tiny">
+              Left: Adding an image with 3 clicks after opening, hitting delete to remove an image <br />
+              Right: Adding an image with 1 click, using mobile-friendly buttons to remove images
+            </Footer>
+          </Box>
+            <Box mt="huge">
+              <iframe frameBorder="0" style={{ 
+                display: 'block',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                  }}
+              width="375" height="715" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Faw3MvuC2eNf2YQaIFKN1LQ%2FLWC-Composer-Q1-Q2-2020%3Fnode-id%3D155%253A3769%26viewport%3D-935%252C-469%252C0.2638188898563385%26scaling%3Dmin-zoom&chrome=DOCUMENTATION"
+              allowfullscreen></iframe>
+            </Box>
+        </Container>
+      </Section>
+      <Section>
         <Container>
           <Box width={["100%", "85%"]} mx="auto">
             <Heading3>
@@ -158,10 +258,16 @@ function Composer() {
               However, forcing everything to be oriented around a title creates confusion on what is a title vs body
             </Footer>
           </Box>
+          <Box mt="huge">
+            <Image src="/images/toggle-explorations.png" />
+            <Footer>
+              Above: Various explorations on how to toggle between posts and questions
+            </Footer>
+          </Box>
         </Container>
       </Section>
 
-      <Section>
+      <Section backgroundColor="bg_alt">
         <Container>
           <Box width={["100%", "85%"]} mx="auto">
             <Heading3>
