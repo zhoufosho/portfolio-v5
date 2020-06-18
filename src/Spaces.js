@@ -30,8 +30,11 @@ function Spaces() {
                   <br /><br />
                   Since this project has spanned multiple teams and quarters, below I will highlight 
                   some of the key projects and product areas that I was most heavily involved in. 
-                  <br /><br />
-                  Since 2018, our 
+                  <br /><br /><br />
+                  <Subheading>Impact</Subheading>
+                  Since launching a small alpha in late 2018, content generation has grown <Strong>50X</Strong>. 
+                  The largest space has <Strong>>1M followers</Strong> (by comparison, the most followed user has ~500K followers). 
+                  Users click on ~2M notifications about Spaces each week.
                 </Paragraph>
               </Box>
               <Box ml="large" width={["100%", "30%"]}>
@@ -131,17 +134,22 @@ function Spaces() {
               The Solution: Spaces (aka User-Defined Channels and Communities)
             </Heading3>
             <Paragraph>
-              Before deciding to build a new product, we started on an exploratory effort to understand and prototype a wide variety of
-              of potential solutions. These ideas taught us a lot about the problem space and what solutions could and could not work.<br /><br />
+              Before deciding to build a new product, our team began as an exploratory effort to understand and prototype a wide variety of
+              of potential solutions. These ideas taught us a lot about the problem space and what solutions could and could not work. 
               Some highlighted ideas include: 
               <ul>
-                <li>Ranking-only solutions: Leverage machine learning to automatically assemble people who can answer it 
+                <li><Strong>Ranking-only solutions</Strong>: Leverage machine learning to automatically assemble people who can answer it 
                 (e.g. automatically group scientists so you can request answers from Scientists)</li>
-                <li>Q&A-based Groups product: Use existing question and answer infrastructure and only certain people can ask or answer them</li>
-                <li>Re-imagining existing "boundaries" (e.g. topic page): Re-use existing interest-based follow graphs to redraw and enforce shared norms </li>
+                <li><Strong>Q&A-only groups product</Strong>: Use existing question and answer infrastructure and only certain people can ask or answer them</li>
+                <li><Strong>Re-imagining existing topic boundaries</Strong>: Redraw and enforce shared norms for topic pages, a loosely boundaried product</li>
               </ul> 
-              Through these various prototypes and ideas, we determined the best way forward was none of these. Instead, we needed to create
-              a product where users decide where the boundaries were. Hence, we ended up building Spaces.
+              I led design work on exploring topic boundaries, and actively used and participated in discussions on the Q&A-only groups product and ranking solutions. 
+              As we slowly started to understand that we were trying to build a communities product, I worked with user research to understand 
+              what communities existed on Quora despite our lack of investment in them.
+              <br /><br />
+              Through user research insights and learnings from these various prototypes and ideas, 
+              we determined the best way forward was none of these. Instead, we needed to create
+              something where <Strong>users define the boundaries</Strong>. Hence, we ended up building Spaces.
               </Paragraph>
           </Box>
           <Box mb="huge" mt="large">
@@ -169,7 +177,7 @@ function Spaces() {
         </Container>
       </Section>
 
-      <Section backgroundColor="bg_alt">
+      <Section backgroundColor="bg_alt" id="roles">
         <Container>
           <Box width={["100%", "85%"]} mx="auto">
             <Heading3>
@@ -231,14 +239,83 @@ function Spaces() {
             </Heading3>
             <Box>
               <Paragraph>
-                
+                One learning I took away from the early prototypes was that Quora questions are extremely extremely complicated. 
+                More importantly – from a user perspective, questions and answers may be too restrictive in the types of content you can create. For example, 
+                users may need time to discuss, debate, and figure out what their norms and practices are, and it feels too awkward and formal to ask a question like 
+                "What are our norms?". 
+                <br /><br />
+                In our first build of Spaces, I proposed for our team to focus exclusively on freeform posts and to ignore questions entirely. 
+                The team had already built out some version of question integration, but I pushed to remove all question features and restart from scratch.  
+                This allowed us to focus our time developing <StyledLink href="#roles">roles</StyledLink>, building out invite mechanics, 
+                and exploring models for <StyledLink href="#notifs">notifications & feed</StyledLink>.
+                We later followed up on integrating questions and link; 
+                however, starting with posts made a lot of the initial assumptions much easier. <br /><br />
+                <Strong>Impact</Strong>: Before we started investing in other content types in 2019,
+                posts and links respectively made up <Strong>60%</Strong> and <Strong>12%</Strong> of content added to Spaces. <br /><br />
+                In 2020, I pursued follow up work on the <StyledLink href="/composer">composer and simplifying content types</StyledLink>.
               </Paragraph>
             </Box>
+          </Box>
+          <Box>
+            <Box><Image src="/images/content-types.png" /></Box>
+            <Footer>
+              Above: Non-Spaces Quora allows content in the form of Q&A and links. In Spaces, you can add freeform posts.
+            </Footer>
           </Box>
         </Container>
       </Section>
 
-      <Section backgroundColor="bg_alt">
+      
+      <Section backgroundColor="bg_alt" id="notifs">
+        <Container>
+          <Box width={["100%", "85%"]} mx="auto">
+            <Heading3>
+              Notifications & Feed: Surfacing the Best Content, in Real-Time
+            </Heading3>
+            <Box>
+              <Paragraph>
+                  Prior to Spaces, Quora users rarely received any notifications – 
+                  most engagement came in the form of receiving and reading Digest emails.   
+                  Outside of Spaces, only 6% of users receive on average more than one notif per week.
+                  With Digest emails, we had to rank massive sets of answers related to topics that users 
+                  were interested in to find a few that were relevant. This problem became harder
+                  as our content scaled. 
+                  <br /><br />
+                  However, since Spaces allow users to define content boundaries, the likelihood of something
+                  being more relevant is much higher. The speed of content through the system 
+                  flows much faster, so we have to shift our mode of interaction from email -> to feed and notifications.
+                  <br /><br />
+                  In 2019, I led a project with 1 engineer and 1 data scientist to run an experiment introducing a content sorting to 
+                  enable larger spaces to surface the best content to the top. My main role was aligning stakeholders on what the 
+                  heuristics should be used in the sort. In 2019, I also designed and implemented an experiment 
+                  to test an optimized notification landing experience.  
+                  <br /><br />
+                  <Strong>Impact</Strong>: The notification experiment increased active minutes on the Space page by ~90%. 
+                  Sorting the space page increased space content added by ~25%.
+              </Paragraph>
+            </Box>
+          </Box>
+          <Box mt="large">
+            <Flex alignSelf="center">
+              <Box><Image src="/images/notif-picker.png" /></Box>
+              <Box><Image src="/images/feed-sort.png" /></Box>
+            </Flex>
+            <Footer>
+              Left: By default, users receive highlight notifs trained by machine learning models. Users can change their notification frequency.<br />
+              Right: By default, the Top sort surfaces the best content based on audience votes. Users can change their default to Recent for real-time updates
+            </Footer>
+            <Box mx="auto" width="70%">
+              <Box><Image src="/images/notif-injection.png" /></Box>
+            </Box>
+            <Footer>
+              Above: By injecting the notification at the top of the Space page after clicking through, Space page active minutes increased ~90%.
+            </Footer>
+          </Box>
+        </Container>
+      </Section>
+
+
+      <Section>
         <Container>
           <Box width={["100%", "85%"]} mx="auto">
             <Heading3>
@@ -263,40 +340,6 @@ function Spaces() {
         </Container>
       </Section>
 
-      <Section>
-        <Container>
-          <Box width={["100%", "85%"]} mx="auto">
-            <Heading3>
-              Notifications & Feed: Emphasizing Real-Time Content
-            </Heading3>
-            <Box>
-              <Paragraph>
-                  Prior to Spaces, Quora users rarely received any notifications – 
-                  most engagement came in the form of receiving and reading Digest emails.   
-                  Outside of Spaces, only 6% of users receive on average more than one notif per week.
-                  With Digest emails, we had to rank massive sets of answers related to topics that users 
-                  were interested in to find a few that were relevant. This problem became harder
-                  as our content scaled. 
-                  <br /><br />
-                  However, since Spaces allow users to define content boundaries, the likelihood of something
-                  being more relevant is much higher. The speed of content through the system 
-                  flows much faster, so we have to shift our mode of interaction from email -> to feed and notifications.
-              </Paragraph>
-            </Box>
-          </Box>
-          <Box mt="large">
-            <Flex alignSelf="center">
-              <Box><Image src="/images/notif-picker.png" /></Box>
-              <Box><Image src="/images/feed-sort.png" /></Box>
-            </Flex>
-            <Footer>
-              Left: By default, users receive highlight notifs trained by machine learning models. Users can change their notification frequency.<br />
-              Right: By default, the Top sort surfaces the best content based on audience votes. Users can change their default to Recent for real-time updates
-            </Footer>
-          </Box>
-        </Container>
-      </Section>
-
       <Section id="submissions" backgroundColor="bg_alt">
         <Container>
           <Box width={["100%", "85%"]} mx="auto">
@@ -314,7 +357,7 @@ function Spaces() {
                   how might we <Strong>enable more people to contribute</Strong> while maintaining 
                   boundaries and trust of the Space community? 
                   <br /><br />
-                  In late 2018, I led a small team of 1 other designer and 2 engineers to launch 
+                  In early 2019, I led a small team of 1 other designer and 2 engineers to launch 
                   Submissions for Spaces. With submissions, anyone can submit content to the space. 
                   Once the submission is approved, this content appears in the space and is eligible to be sent 
                   in notifications. 
@@ -398,21 +441,6 @@ function Spaces() {
               Left: With answer suggestions, users can find existing content on Quora to share to their space<br />
               Right: With link suggestions, users can connect RSS feeds to their space and share links
             </Footer>
-          </Box>
-        </Container>
-      </Section>
-
-      <Section backgroundColor="bg_alt">
-        <Container>
-          <Box width={["100%", "85%"]} mx="auto">
-            <Heading3> 
-              Measuring Success
-            </Heading3>
-            <Box>
-              <Paragraph>
-                
-              </Paragraph>
-            </Box>
           </Box>
         </Container>
       </Section>

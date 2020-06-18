@@ -334,7 +334,7 @@ function Composer() {
             </Heading3>
             <Box>
               <Paragraph>
-                  
+                Coming soon
               </Paragraph>
             </Box>
           </Box>
