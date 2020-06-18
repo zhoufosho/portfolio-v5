@@ -15,23 +15,37 @@ function Composer() {
             <Heading2>
               Simplifying Content Creation
             </Heading2>
-            <Box width={["80%", "70%"]}>
-              <Paragraph>
-                Quora's mission is to share and grow the world's knowledge. For nearly the first 
-                decade on the platform, all of the knowledge existed in the form of questions 
-                and answers. 
-                <br /><br />
-                With the launch of <StyledLink href="/spaces">Spaces</StyledLink> and a new engagement strategy, it was becoming evident that 
-                our historical focus on Q&A and long-form content was limiting our growth. 
-                At Quora, content types are very difficult to change because of all the ranking 
-                and engineering infrastructure that are built into them. Instead of reusing what exists, 
-                it is easier to create new ones – this created an explosion of content
-                types that made it difficult for users to understand for us to maintain.
-                <br /><br />
-                In this project, I focused on creating a composer that <Strong>simplifies existing content types </Strong>
-                and <Strong>enables lightweight content creation</Strong>.
-              </Paragraph>
-            </Box>
+            <Flex>
+              <Box mr="large" width={["80%", "70%"]}>
+                <Paragraph>
+                  Quora's mission is to share and grow the world's knowledge. For nearly the first 
+                  decade on the platform, all of the knowledge existed in the form of questions 
+                  and answers. 
+                  <br /><br />
+                  With the launch of <StyledLink href="/spaces">Spaces</StyledLink> and a new engagement strategy, it was becoming evident that 
+                  our historical focus on Q&A and long-form content was limiting our growth. 
+                  At Quora, content types are very difficult to change because of all the ranking 
+                  and engineering infrastructure that are built into them. Instead of reusing what exists, 
+                  it is easier to create new ones – this created an explosion of content
+                  types that made it difficult for users to understand for us to maintain.
+                  <br /><br />
+                  In this project, I focused on creating a composer that <Strong>simplifies existing content types </Strong>
+                  and <Strong>enables lightweight content creation</Strong>.
+                </Paragraph>
+              </Box>
+              <Box ml="large" width={["100%", "30%"]}>
+                <Text variant="subtext">
+                  I led and executed product design on the composer (vision, UI design, aligning) for 
+                  the first half of 2020. 
+                  <br /><br />
+                  I worked with 1 product engineer, 1 front-end engineer, and 1 iOS engineer. 
+                  Here, I was responsible for coming up with the vision of the composer, facilitating 
+                  cross-functional coordination to build a React prototype, presenting the vision to 
+                  the executive team, and managing cross-functional coordination to (soon!) release 
+                  the experience on iOS. 
+                </Text>
+              </Box>
+            </Flex>
           </Box>
         </Container>
       </Section>

@@ -34,18 +34,18 @@ function Spaces() {
               </Box>
               <Box ml="large" width={["100%", "30%"]}>
                 <Text variant="subtext">
-                  I’ve been leading product design (vision, design, scoping, building) on Spaces since 2018, with projects
-                  in between. <br /><br />
+                  I’ve been leading product design (vision, design, aligning, scoping, writing code) on Spaces since 2018, 
+                  with projects in between. <br /><br />
                   In 2018, we started with a 5-person team (2 engineers, 2 designers, 1 PM, 
-                  1 data scientist). I was responsible for 
-                  problem exploration, determining what direction to take our prototypes in, 
+                  1 data scientist). I was responsible for some facets of problem exploration. After 
+                  deciding on a direction, I helped guide prioritization of our prototype,  
                   designing and coding the final prototype that we launched, managing design 
                   work, and cross-functional coordination and alignment. 
                   <br /><br />
                   Post launch in late 2018, Spaces has been integrated into the Core product team, where I have been working 
                   with a larger team of 5-8 engineers, 2-3 designers, 1-2 PMs, and 3 data scientists. I have been  
                   responsible for identifying opportunities for design impact, 
-                  maintaining cross-functional coordination, alignment, and output, and some IC work.
+                  maintaining cross-functional coordination and alignment, and some IC work.
                 </Text>
               </Box>
             </Flex>
@@ -370,7 +370,7 @@ function Spaces() {
                 are still on Quora today.
 
                 <br /><br />
-                #### Image of publisher spaces ####
+                #### TODO: Image of publisher spaces ####
 
                 <br /><br />
                 An ongoing challenge for Spaces was: how might we <Strong>help contributors find content 
