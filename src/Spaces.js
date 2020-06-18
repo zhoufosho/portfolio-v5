@@ -29,7 +29,9 @@ function Spaces() {
                   <Strong> scaling content generation</Strong>. 
                   <br /><br />
                   Since this project has spanned multiple teams and quarters, below I will highlight 
-                  some of the key projects and product areas that I was most heavily involved in.
+                  some of the key projects and product areas that I was most heavily involved in. 
+                  <br /><br />
+                  Since 2018, our 
                 </Paragraph>
               </Box>
               <Box ml="large" width={["100%", "30%"]}>
