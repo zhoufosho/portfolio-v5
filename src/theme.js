@@ -85,6 +85,13 @@ export default {
       fontSize: "regular",
       mb: "small",
     },
+    subtext: {
+      fontFamily: "body",
+      lineHeight: "body",
+      fontSize: "small",
+      mb: "small",
+      color: "muted",
+    },
     footer: {
       fontFamily: "body",
       lineHeight: "body",

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Box, Button, Text, Flex, Image } from "rebass";
-import { Heading1, Subheading, Heading2, Heading3, Paragraph, Container, Section, Strong, Footer, SiteHeader, Italic } from "./Components";
+import { Heading1, Subheading, Heading2, Heading3, 
+  Paragraph, Container, Section, Strong, Footer, SiteHeader, Italic, 
+  StyledLink } from "./Components";
 
 function Spaces() {
   return (
@@ -12,23 +14,42 @@ function Spaces() {
             <Heading2>
               Launching & Scaling Spaces
             </Heading2>
-            <Box width={["80%", "70%"]}>
-              <Paragraph>
-                As Quora as scaled, it became more difficult to ask questions 
-                and get satisfactory answers. We believed this was due to 
-                context collapse – lack of predictable audience expectations. 
-                <br /><br />
-                In early 2018, I focused on researching the problem and prototyping
-                various product explorations that creates boundaries
-                in order  to support more contextual interactions. Once we felt 
-                confident in a product direction, we <Strong>launched a communities product </Strong>
-                in late 2018. Since then, our team has been focusing on
-                <Strong> scaling content generation</Strong>. 
-                <br /><br />
-                Since this project has spanned multiple teams and quarters, below I will highlight 
-                some of the key projects and product areas that I was most heavily involved in.
-              </Paragraph>
-            </Box>
+            <Flex>
+              <Box mr="large" width={["80%", "70%"]}>
+                <Paragraph>
+                  As Quora has scaled, it became more difficult to ask questions 
+                  and get satisfactory answers. We believed this was due to 
+                  context collapse – lack of predictable audience expectations. 
+                  <br /><br />
+                  In early 2018, I focused on researching the problem and prototyping
+                  various product explorations that creates boundaries
+                  in order  to support more contextual interactions. Once we felt 
+                  confident in a product direction, we <Strong>launched a communities product </Strong>
+                  in late 2018. Since then, our team has been focusing on
+                  <Strong> scaling content generation</Strong>. 
+                  <br /><br />
+                  Since this project has spanned multiple teams and quarters, below I will highlight 
+                  some of the key projects and product areas that I was most heavily involved in.
+                </Paragraph>
+              </Box>
+              <Box ml="large" width={["100%", "30%"]}>
+                <Text variant="subtext">
+                  Timeline: 2018 – 2019 <br /><br />
+                  I’ve been leading product design (vision, design, scoping, building) on Spaces since 2018, with projects
+                  in between. <br /><br />
+                  We started with a small scrappy 5-person team (2 engineers, 2 designers, 1 PM, 
+                  1 data scientist) to launch the product. During this time, I was responsible for 
+                  problem exploration through prototypes, determining what features to build, 
+                  designing and building in code the prototype that we eventually launched, managing design 
+                  work, and cross-functional coordination and alignment. 
+                  <br /><br />
+                  Post launch, Spaces has been integrated into the Core product team, where I have been working 
+                  with a larger team of 5-8 engineers, 2-3 designers, 1-2 PMs, and 3 data scientists. I am 
+                  responsible for identifying opportunities for design, 
+                  maintaining cross-functional coordination, alignment and output, and some UI/product work.
+                </Text>
+              </Box>
+            </Flex>
           </Box>
         </Container>
       </Section>
@@ -151,33 +172,50 @@ function Spaces() {
         <Container>
           <Box width={["100%", "85%"]} mx="auto">
             <Heading3>
-              Roles & Permissions: Setting Group Expectations
+              Roles & Permissions: Setting Group Expectations 
             </Heading3>
             <Box>
               <Paragraph>
-                Spaces intend to bring together a group of people towards a common 
-                goal. These groups of people tend to coordinate better if there are clearly defined
-                roles, and we set out to create those in the product. 
+                Since Spaces are user-defined boundaries, we needed to set up a way for users to 
+                define the context and norms of the Space. 
+                When we first launched, it was important that there were trusted contributors 
+                such that the content produced in Spaces would be high quality and they were not overwhelmed 
+                with people jumping into without context. 
+                We started with three roles – 
                 <ul>
-                  <li><Strong>Owner</Strong> - can invite and remove all other roles (including admins), 
-                  transfer ownership of the Space, change settings, delete the Space, 
-                  everything else that an admin can do
+                  <li><Strong>Admin</Strong> (only one) - can invite all other roles, block users, 
+                  change settings, remove content from the Space</li>
+                  <li><Strong>Contributors</Strong> - can add content</li>
+                  <li><Strong>Followers</Strong> - can consume and interact with content (e.g. comment, upvote)
                   </li>
-                  <li><Strong>Admin</Strong> - can invite and remove moderators, contributors, and followers, 
-                  can block users, change settings, manage submissions
+                </ul>
+                <br />
+                After launching <StyledLink href="#submissions">Submissions</StyledLink>, it was clear that 
+                admins needed more help running a Space – the single admin model was failing as Spaces started 
+                to scale. <br /><br />
+                In late 2018, I led a small team of myself and 1 engineer to rethink these roles and permissions, 
+                trying to tackle how to <Strong>support people running a space</Strong>. 
+                We introduced a new role, added an admin log, and added badges to recognize the status of these 
+                people running a Space. In this project, we added and expanded on: 
+                <ul>
+                  <li><Strong>Admins</Strong> - can invite and remove all other roles, 
+                  change settings, delete the Space, and everything else moderators can do
                   </li>
-                  <li><Strong>Moderator</Strong> – can invite and remove contributors and followers, can block, and manage submissions
-                  </li>
-                  <li><Strong>Contributor</Strong> - can post without approval
-                  </li>
+                  <li><Strong>Moderators</Strong> – can invite and remove contributors and followers, can block 
+                  people from the space, manage submissions, and remove content from the Space</li>
+                  <li><Strong>Contributors</Strong> - can post without permission</li>
                 </ul>
               </Paragraph>           
             </Box>
-            <Box width={["85%", "70%"]} mx="auto">
-              <Image src="/images/cred-and-badges.png" />   
+            <Box>
+              <Flex>
+                <Box><Image src="/images/cred-and-badges.png" /></Box>
+                <Box><Image src="/images/admin-log.png" /></Box>
+              </Flex>
               <Footer>
-                Left: Badges for admins and moderators give reputation to the author<br />
-                Right: Customizable space credibility allows for more granular expression
+                Left: Badges make admins and moderators more easily recognizable and increases their perceived reputation<br />
+                Right: All actions taken in the Space are recorded in the admin log to increase accountability and awareness 
+                amongst various people managing the Space
               </Footer>
             </Box>
           </Box>
@@ -266,7 +304,7 @@ function Spaces() {
         </Container>
       </Section>
 
-      <Section backgroundColor="bg_alt">
+      <Section id="submissions" backgroundColor="bg_alt">
         <Container>
           <Box width={["100%", "85%"]} mx="auto">
             <Heading3> 
@@ -275,14 +313,18 @@ function Spaces() {
             <Flex alignSelf="center">
               <Box width={["auto"]}>
                 <Paragraph>
-                  Unlike other groups products, Spaces has very strong in-/out- group dynamics. However, through 
-                  user research, we found one of the biggest bottlenecks for growth is finding and vetting contributors. <br /><br />
-                  We started with the question:  
-                  how might we <Strong>enable more people to become contributors </Strong>to spaces?
+                  Unlike most groups products, Spaces has very strong in-/out- group dynamics. 
+                  After launching, I realized the restriction on content contribution was one of the 
+                  biggest bottlenecks for growth. 
                   <br /><br />
-                  With Sumissions, we hoped to:
+                  I identified the opportunity to tackle the question:
+                  how might we <Strong>enable more people to contribute</Strong>?
+                  <br /><br />
+                  In late 2018, I led a small team of 1 other designer and 2 engineers to launch an 
+                  MVP of the product. With the launch of Submissions, our goals were:
                   <ul>
-                    <li>Increase content in the long-run by providing </li>
+                    <li>Increase content added to Spaces </li>
+                    <li>Long term, increase number of contributors per Space </li>
                     <li>Enable moderators and admins to find more engaged and qualified contributors </li>
                   </ul>
                 </Paragraph>
@@ -291,7 +333,7 @@ function Spaces() {
             </Flex>
             <Footer>
               Above: Followers can submit content to the space. Once the submission is approved, <br />this content 
-              appears in the space and potentially in future notifications.
+              appears in the space and is eligible to be sent in notifications. 
             </Footer>
           </Box>
         </Container>
@@ -306,14 +348,39 @@ function Spaces() {
             <Box>
               <Paragraph>
                 One of the biggest painpoints we heard over and over was that it was difficult to 
-                find quality content. We started with the question:  
-                how might we <Strong>help admins source content </Strong>for their spaces?
+                find quality content. We started asking: how might we 
+                <Strong> help source content </Strong>for Spaces?
                 <br /><br />
+                In early 2019, we had a unique opportunity working with many digital publishers. Some were looking to  
+                increase their clicks and views in an easy, set-it-and-forget-it way, whereas 
+                others wanted to take this as an opportunity to try building their audience on Quora. 
+                Using RSS feeds as a generalizable framework that publishers are familiar with, 
+                we wanted to build integrations to support both types of clients. 
+
+                <br /><br />
+                For RSS links on Spaces, I led the product vision, did IC design work, and wrote front-end code to 
+                launch RSS link suggestions. I worked with 1 engineer and 2 members from our writer-relations 
+                team to launch Spaces with publishing partners in the US and India, almost all of which 
+                are still on Quora today.
+
+                <br /><br />
+                #### Image of publisher spaces ####
+
+                <br /><br />
+                We kept running into the problem of <Strong>helping contributors find content to add to Spaces </Strong> 
+                without having to hunt across the internet. Fortunately, we had a giant respository 
+                of content in the form of answers on Quora. <br /><br />
+
+                In mid/late 2019, our team was exploring the same framework of suggesting content – 
+                expanding from RSS links to suggesting answers. Turns out it was pretty expandable! 
+                I guided product direction using the framework and principles I had previously established 
+                to help the team of 1 PM and 1 engineer launch answer suggestions.<br /><br />
                 With Suggestions, we hoped to:
                 <ul>
-                  <li>Reduce friction of sharing content from off-Quora by integrating it into the product</li>
+                  <li>Reduce friction of sharing content from on- and off-Quora by integrating it into the product</li>
                   <li>Increase ease of curation by suggesting answers that our machine learning models think are share-worthy </li>
                 </ul>
+                <br /><br />
               </Paragraph>
             </Box>
           </Box>

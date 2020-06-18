@@ -13,7 +13,7 @@ function Composer() {
         <Container>
           <Box mt="40vh">
             <Heading2>
-              Simplifying content creation
+              Simplifying Content Creation
             </Heading2>
             <Box width={["80%", "70%"]}>
               <Paragraph>
