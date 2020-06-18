@@ -103,19 +103,18 @@ function Composer() {
         <Container>
           <Box width={["100%", "85%"]} mx="auto">
             <Heading3>
-              The Solution: Leveraging Posts
+              The Solution: Reducing to Posts & Questions
             </Heading3>
             <Box>
               <Paragraph>
-                The final solution I show below 
-                <br /><br />
                 I oriented my solution towards: 
                 <ul>
-                  <li>Fewer, more flexible content types</li>
-                  <li>Reducing requirements </li>
-                  <li>Reducing friction: removing clicks to start creating, removing clicks to create what you want</li>
+                  <li><Strong>Fewer, more flexible content types</Strong>: consolidating posts and links</li>
+                  <li><Strong>Reducing requirements</Strong>: required fields, character limits </li>
+                  <li><Strong>Reducing friction</Strong>: removing clicks to start creating, removing clicks to create what you want</li>
                 </ul>
-                  
+                <br />
+                Here is a quick overview of the final composer – 
               </Paragraph>
             </Box>
           </Box>
@@ -220,15 +219,29 @@ function Composer() {
               Right: Adding an image with 1 click, using mobile-friendly buttons to remove images
             </Footer>
           </Box>
-            <Box mt="huge">
+          <Box width={["100%", "85%"]} mx="auto" mt="huge">
+            <Subheading>
+              PROTOTYPE: PROCEED WITH CAUTION
+            </Subheading>
+            <Paragraph>
+              Because designers at Quora are usually responsible for writing front-end code, the prototypes we make are 
+              directly in the codebase. However, this was a unique case where the project required native staffing and coordination, 
+              and our front-end engineer had deep technical knowledge on our text editor. <br /><br />
+
+              In order to build alignment across teams and stakeholders, I built a "source of truth" interactive Figma prototype to 
+              surface edge cases and to show various details. It may have deteriorated since, but feel free to try and play 
+              around with it!
+            </Paragraph>
+            <Box mt="large">
               <iframe frameBorder="0" style={{ 
                 display: 'block',
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                  }}
+              }}
               width="375" height="715" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Faw3MvuC2eNf2YQaIFKN1LQ%2FLWC-Composer-Q1-Q2-2020%3Fnode-id%3D155%253A3769%26viewport%3D-935%252C-469%252C0.2638188898563385%26scaling%3Dmin-zoom&chrome=DOCUMENTATION"
               allowfullscreen></iframe>
             </Box>
+          </Box>
         </Container>
       </Section>
       <Section>

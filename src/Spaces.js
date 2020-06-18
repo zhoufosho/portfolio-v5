@@ -225,11 +225,11 @@ function Spaces() {
         <Container>
           <Box width={["100%", "85%"]} mx="auto">
             <Heading3>
-              Enabling Posts: Moving beyond Q&A
+              Leveraging Posts: Moving beyond Q&A
             </Heading3>
             <Box>
               <Paragraph>
-                  
+                
               </Paragraph>
             </Box>
           </Box>
