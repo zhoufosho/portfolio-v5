@@ -10,8 +10,8 @@ function Spaces() {
       <SiteHeader />
       <Section>
         <Container>
-          <Box mt="40vh">
-            <Heading2>
+          <Box mt="30vh">
+            <Heading2 mb="large">
               Launching & Scaling Spaces
             </Heading2>
             <Flex>
@@ -244,15 +244,16 @@ function Spaces() {
                 users may need time to discuss, debate, and figure out what their norms and practices are, and it feels too awkward and formal to ask a question like 
                 "What are our norms?". 
                 <br /><br />
-                In our first build of Spaces, I proposed for our team to focus exclusively on freeform posts and to ignore questions entirely. 
+                In our first build of Spaces, I proposed our team to focus exclusively on freeform posts and to ignore questions entirely. 
                 The team had already built out some version of question integration, but I pushed to remove all question features and restart from scratch.  
                 This allowed us to focus our time developing <StyledLink href="#roles">roles</StyledLink>, building out invite mechanics, 
                 and exploring models for <StyledLink href="#notifs">notifications & feed</StyledLink>.
-                We later followed up on integrating questions and link; 
-                however, starting with posts made a lot of the initial assumptions much easier. <br /><br />
+                Before launch, we followed up on integrating questions and links; 
+                however, starting with posts made a lot of the initial assumptions much easier. 
+                (Spoiler: In 2020, I consolidated links and posts while working on the <StyledLink href="/composer">composer</StyledLink>)
+                <br /><br />
                 <Strong>Impact</Strong>: Before we started investing in other content types in 2019,
                 posts and links respectively made up <Strong>60%</Strong> and <Strong>12%</Strong> of content added to Spaces. <br /><br />
-                In 2020, I pursued follow up work on the <StyledLink href="/composer">composer and simplifying content types</StyledLink>.
               </Paragraph>
             </Box>
           </Box>
@@ -408,10 +409,20 @@ function Spaces() {
                 launch RSS link suggestions. I worked with 1 engineer and 2 members from our writer-relations 
                 team to launch Spaces with publishing partners in the US and India, almost all of which 
                 are still on Quora today.
+                <br /><br />
+                <Strong>Impact</Strong>: Two months after launch, ~43% of spaces content came from 
+                publisher spaces.
 
                 <br /><br />
-                #### TODO: Image of publisher spaces ####
-
+              </Paragraph>
+              <Box>
+                <Box><Image src="/images/rss-publisher-spaces.png" /></Box>
+                <Footer>
+                  Left: With answer suggestions, users can find existing content on Quora to share to their space<br />
+                  Right: With link suggestions, users can connect RSS feeds to their space and share links
+                </Footer>
+              </Box>
+              <Paragraph>
                 <br /><br />
                 An ongoing challenge for Spaces was: how might we <Strong>help contributors find content 
                 to add to Spaces</Strong> without having to hunt across the internet? 

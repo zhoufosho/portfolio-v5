@@ -54,8 +54,8 @@ export const Footer = ({ children, ...restProps }) => {
 
 export const SiteHeader = ({ children, ...restProps }) => {
   return (
-    <Container>
-      <Paragraph>
+    <Container mt="large">
+      <Paragraph mt="small">
       <Link href="/" sx={{
         ":hover": {
           fontWeight: "bold",

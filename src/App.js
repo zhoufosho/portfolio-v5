@@ -9,9 +9,11 @@ function Router() {
   const pathname = window.location.pathname;
   switch (pathname) {
     case "/composer":
-      return <PrivatePage component={Composer} />
+      return <Composer />
+      // return <PrivatePage component={Composer} />
     case "/spaces":
-      return <PrivatePage component={Spaces} />
+      return <Spaces />
+      // return <PrivatePage component={Spaces} />
     case "/dogfooding":
       return <Dogfooding />
     default:

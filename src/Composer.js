@@ -11,8 +11,8 @@ function Composer() {
       <SiteHeader />
       <Section>
         <Container>
-          <Box mt="40vh">
-            <Heading2>
+          <Box mt="30vh">
+            <Heading2 mb="large">
               Simplifying Content Creation
             </Heading2>
             <Flex>
