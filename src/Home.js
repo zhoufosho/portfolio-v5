@@ -16,7 +16,7 @@ const Projects = [
     name: "Launching & Scaling Spaces",
     desc: "Creating and growing Quora's communities product",
     color: "white",
-    image: "images/round-launched-spaces.gif",
+    image: "images/guitar-space.png",
     url: "/spaces",
     subheading: "2018 – 2019 · Quora",
 
