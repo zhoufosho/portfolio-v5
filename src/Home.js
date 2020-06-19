@@ -14,7 +14,7 @@ const Projects = [
   },
   {
     name: "Launching & Scaling Spaces",
-    desc: "Enabling context as content scales",
+    desc: "Creating and growing Quora's communities product",
     color: "white",
     image: "images/round-launched-spaces.gif",
     url: "/spaces",
@@ -22,14 +22,23 @@ const Projects = [
 
   },
   {
-    name: "Dogfooding",
-    desc: "Changes in process to elevate product quality",
+    name: "Adventures in Making",
+    desc: "Sewing clothes, making zines, and attempting pottery",
     color: "#82B3A4",
-    subheading: "2019 · Quora",
-    subheading_color: "teal",
-    url: "/dogfooding",
-    image: "/images/dogfood-poster.png",
+    image: "images/making.png",
+    subheading: "2018 – present · Misc",
+    subheading_color: "teal",    
+
   },
+  // {
+  //   name: "Dogfooding",
+  //   desc: "Changes in process to elevate product quality",
+  //   color: "#82B3A4",
+  //   subheading: "2019 · Quora",
+  //   subheading_color: "teal",
+  //   url: "/dogfooding",
+  //   image: "/images/dogfood-poster.png",
+  // },
 ];
 
 function Home() {
@@ -48,7 +57,8 @@ function Home() {
             <Box sx={{
               ":hover": {
                 transform: "translate(-2px, -2px)"
-              }
+              },
+              "cursor": !project.url && "not-allowed"
             }}>
               <Container>
                 <Flex flexDirection={ index % 2 === 0 && "row-reverse"}>
