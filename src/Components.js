@@ -3,8 +3,9 @@ import { Heading, Text, Image, Button, Link } from "rebass";
 import { Flex, Box } from "reflexbox"
 import { Label, Input } from "@rebass/forms"
 
-
+import {PRIVATE_PAGE_KEY} from "./App"
 const FULL_WIDTH = 1032;
+
 
 export const Heading1 = props => {
   return <Text variant="heading" {...props} />;
@@ -202,7 +203,8 @@ export class PrivatePage extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    if (this.state.password === process.env.PRIVATE_PAGE_KEY) {
+
+    if (this.state.password === PRIVATE_PAGE_KEY) {
       this.setState({isAuthenticated: "true"});
     }
   }
