@@ -332,9 +332,9 @@ function Spaces() {
             </Box>
           </RegularWidth>
           <Box mt="large">
-            <Flex>
-              <Box alignSelf="center" width="100%"><Image src="/images/questions-in-space.png" /></Box>
-              <Box><Image src="/images/space-question-page.png" /></Box>
+            <Flex flexWrap="wrap">
+              <Box width={[2/3]}><Image src="/images/questions-in-space.png" /></Box>
+              <Box width={[1/3]}><Image src="/images/space-question-page.png" /></Box>
             </Flex>
             <Footer>
               Left: Now the Space provides context – the questions are specific to the video game Red Dead Rodeo (and not hunting in real life)<br />
