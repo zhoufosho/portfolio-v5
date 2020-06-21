@@ -5,7 +5,6 @@ import { Label, Input } from "@rebass/forms"
 
 
 const FULL_WIDTH = 1032;
-const TEMP_PW = "mochi";
 
 export const Heading1 = props => {
   return <Text variant="heading" {...props} />;
@@ -193,6 +192,7 @@ export const InputField = props => {
 export class PrivatePage extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       password: "",
       isAuthenticated: false,
@@ -202,7 +202,7 @@ export class PrivatePage extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    if (this.state.password === TEMP_PW) {
+    if (this.state.password === process.env.PRIVATE_PAGE_KEY) {
       this.setState({isAuthenticated: "true"});
     }
   }
