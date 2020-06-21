@@ -201,6 +201,7 @@ export class PrivatePage extends React.Component {
   }
 
   handleSubmit = (event) => {
+    event.preventDefault();
     if (this.state.password === TEMP_PW) {
       this.setState({isAuthenticated: "true"});
     }
