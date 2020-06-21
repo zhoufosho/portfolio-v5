@@ -55,15 +55,15 @@ export const Footer = ({ children, ...restProps }) => {
 export const SiteHeader = ({ children, ...restProps }) => {
   return (
     <Container mt="large">
-      <Paragraph mt="small">
-      <Link href="/" sx={{
-        ":hover": {
-          fontWeight: "bold",
-          color: "teal"
-        }
-      }}>
-      elaine
-      </Link>
+      <Paragraph mt="small" px="medium">
+        <Link href="/" sx={{
+          ":hover": {
+            fontWeight: "bold",
+            color: "teal"
+          }
+        }}>
+        elaine
+        </Link>
       </Paragraph>
 
       
@@ -197,7 +197,7 @@ export class PrivatePage extends React.Component {
                 placeholder="password"
                 onChange = {(event) => this.handleChange(event) } />
               {this.state.showSubmit && 
-                <Box> 
+                <Box onClick={(event) => this.handleSubmit(event)}> 
                   <Image src="/images/chevron_right.png" />
                 </Box>
               }
