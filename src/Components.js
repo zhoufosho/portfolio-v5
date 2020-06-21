@@ -195,7 +195,8 @@ export class PrivatePage extends React.Component {
                 name="password"
                 type="password"
                 placeholder="password"
-                onChange = {(event) => this.handleChange(event) } />
+                onChange = {(event) => this.handleChange(event) } 
+                onSubmit={(event) => this.handleSubmit(event)} />
               {this.state.showSubmit && 
                 <Box onClick={(event) => this.handleSubmit(event)}> 
                   <Image src="/images/chevron_right.png" />
