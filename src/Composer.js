@@ -279,7 +279,7 @@ function Composer() {
               around with it!
             </Paragraph>
 
-            // negative margins on mobile to be flush
+            {/* negative margins on mobile to be flush */}
             <Box mt="large" mx={["-25px", "auto"]}>
               <iframe frameBorder="0" style={{ 
                 display: 'block',
