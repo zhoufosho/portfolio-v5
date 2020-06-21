@@ -1,6 +1,8 @@
 import React from 'react';
-import { Box, Button, Text, Flex, Image, Link } from "rebass";
-import { Heading1, Subheading, Heading2, Heading3, Paragraph, Container, Section, Footer } from "./Components";
+import { Button, Text, Image, Link } from "rebass";
+import { Flex, Box } from "reflexbox"
+import { Heading1, Subheading, Heading2, Heading3, Paragraph, Container, 
+  Section, Footer } from "./Components";
 
 const Projects = [
   {
@@ -44,8 +46,8 @@ const Projects = [
 function Home() {
   return (
     <>
-      <Section pt="40vh">
-        <Container>
+      <Section>
+        <Container pt="40vh">
           <Heading1>i like humans & <br /> solving their problems</Heading1>
           <Heading3 color="muted">elaine zhou · product design lead @quora </Heading3>
         </Container>
@@ -61,15 +63,15 @@ function Home() {
               "cursor": !project.url && "not-allowed"
             }}>
               <Container>
-                <Flex flexDirection={ index % 2 === 0 && "row-reverse"}>
-                  <Box mt="auto" mx="small" flexBasis="110%">
+                <Flex flexDirection={ index % 2 === 0 && "row-reverse"} flexWrap="wrap">
+                  <Box mt="auto" px="small" width={[1, 0.6]}>
                     <Subheading color={project.subheading_color}>
                       {project.subheading}
                     </Subheading>
                     <Heading2>{project.name}</Heading2>
                     <Heading3>{project.desc}</Heading3>
                   </Box>
-                  <Box mx="auto" mx="small" flexBasis="80%">
+                  <Box mx="auto" px="small" width={[1, 0.4]}>
                     <Image src={project.image} />
                   </Box>
                 </Flex>
@@ -78,9 +80,9 @@ function Home() {
           </Link>
         </Section>)
       )}
-      <Section py="xlarge">
+      <Box py="xlarge">
         <Footer>made by elaine · 2020 </Footer>
-      </Section>
+      </Box>
     </>
   );
 }
