@@ -278,7 +278,9 @@ function Composer() {
               surface edge cases and to show various details. It may have deteriorated since, but feel free to try and play 
               around with it!
             </Paragraph>
-            <Box mt="large">
+
+            // negative margins on mobile to be flush
+            <Box mt="large" mx={["-25px", "auto"]}>
               <iframe frameBorder="0" style={{ 
                 display: 'block',
                 marginLeft: 'auto',
