@@ -25,6 +25,12 @@ export const Heading3 = props => {
   );
 };
 
+export const Heading4 = props => {
+  return (
+    <Text variant="heading4" {...props} />
+  );
+};
+
 export const Paragraph = ({ children, ...restProps }) => {
   return (
     <Text

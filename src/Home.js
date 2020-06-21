@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button, Text, Image, Link } from "rebass";
 import { Flex, Box } from "reflexbox"
-import { Heading1, Subheading, Heading2, Heading3, Paragraph, Container, 
-  Section, Footer } from "./Components";
+import { Heading1, Subheading, Heading2, Heading3, Heading4, 
+  Paragraph, Container, Section, Footer } from "./Components";
 
 const Projects = [
   {
@@ -69,7 +69,7 @@ function Home() {
                       {project.subheading}
                     </Subheading>
                     <Heading2>{project.name}</Heading2>
-                    <Heading3>{project.desc}</Heading3>
+                    <Heading4>{project.desc}</Heading4>
                   </Box>
                   <Box mx="auto" px="small" width={[1, 0.4]}>
                     <Image src={project.image} />

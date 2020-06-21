@@ -33,7 +33,7 @@ function Spaces() {
                   Since this project has spanned multiple teams and quarters, below I will highlight 
                   some of the key projects and product areas that I was most heavily involved in. 
                   <br /><br /><br />
-                  <Subheading>Impact</Subheading>
+                  <Strong>Impact: </Strong>
                   Since launching a small alpha in late 2018, content generation has grown <Strong>50X</Strong>. 
                   The largest space has <Strong>>1M followers</Strong> (by comparison, the most followed user has ~500K followers). 
                   Users click on ~2M notifications about Spaces each week.

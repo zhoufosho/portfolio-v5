@@ -76,6 +76,12 @@ export default {
     },
     heading3: {
       color: "primary",
+      fontSize: ["large", "xlarge"],
+      fontFamily: "body",
+      mb: "medium",
+    },
+    heading4: {
+      color: "primary",
       fontSize: ["medium", "large"],
       fontFamily: "body",
       mb: "medium",
