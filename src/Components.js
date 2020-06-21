@@ -207,6 +207,7 @@ export class PrivatePage extends React.Component {
   }
 
   handleChange = (event) => {
+    event.preventDefault();
     this.setState({ password: event.target.value });
     this.setState({ showSubmit: event.target.value });
   }
