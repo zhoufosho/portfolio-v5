@@ -1,8 +1,9 @@
 import React from 'react';
-import { Box, Button, Text, Flex, Image, Link } from "rebass";
+import { Button, Text, Image, Link } from "rebass";
+import { Flex, Box } from "reflexbox"
 import { Heading1, Subheading, Heading2, Heading3, 
   Paragraph, Container, Section, Strong, Footer, SiteHeader,
-  StyledLink
+  StyledLink, MainAndSecondaryGrid, RegularWidth
 } from "./Components";
 
 function Composer() {
@@ -15,8 +16,8 @@ function Composer() {
             <Heading2 mb="large">
               Simplifying Content Creation
             </Heading2>
-            <Flex>
-              <Box mr="large" width={["80%", "70%"]}>
+            <MainAndSecondaryGrid
+              main={
                 <Paragraph>
                   Quora's mission is to share and grow the world's knowledge. For nearly the first 
                   decade on the platform, all of the knowledge existed in the form of questions 
@@ -36,8 +37,9 @@ function Composer() {
                   <Strong>Impact</Strong>: We are finishing development and are aiming to ship an experiment with this composer 
                   by the end of the quarter, with the goal of increasing content added in Spaces. 
                 </Paragraph>
-              </Box>
-              <Box ml="large" width={["100%", "30%"]}>
+              }
+              mainWidth={0.75}
+              secondary={
                 <Text variant="subtext">
                   I led and executed product design on the composer (vision, UI design, aligning) for 
                   the first half of 2020. 
@@ -49,51 +51,48 @@ function Composer() {
                   the executive team, and managing cross-functional coordination to (soon!) release 
                   the experience on iOS. 
                 </Text>
-              </Box>
-            </Flex>
+              } />
           </Box>
         </Container>
       </Section>
 
       <Section backgroundColor="bg_alt">
         <Container>
-          <Box width={["100%", "85%"]} mx="auto">
+          <RegularWidth>
             <Heading3>
               Why a new composer? 
             </Heading3>
-            <Box>
-              <Paragraph>
-                The original motivation for working on the composer was to make content creation more lightweight. 
-                What does it mean to be lightweight? Currently, adding an image requires 3 clicks 
-                and every post requires both a title and a body. 
-                In this vein, lightweight means making it easier to add short posts and image-based content.
-                <br /><br />
-                However, it is not clear how to add images and short posts. 
-                What was the existing state of content types? 
-                <ol>
-                  <li><Strong>Confusing content types</Strong>
-                    <br />
-                    Each content type has its own rules and they are not mutually exclusive. For example, you can add a link to a post
-                    or add a link by itself. They have different rules, render differently, and it was not clear to users when to use each type. 
-                  </li>
-                  <li><Strong>Too many types constantly slowed us down</Strong>
-                    <br />
-                      At the start of this project, there were four distinct content types. 
-                      Whenever we wanted to change or add something,
-                      we had to design it, build it, and figure out ML models four times.
-                  </li>
-                  <li><Strong>Bias towards formal, long-form content</Strong>
-                    <br />
-                    Quora's emphasis has always been on long-form content, questions, and answers. However, with higher context of people
-                    contributing within Spaces – we should allow shorter, easier to produce content to thrive. 
-                    Asking and answering questions on Quora is already relatively intimidating – 
-                    now there is added complexity with users needing to understand the difference between a question, a post, 
-                    a link, a share, and an answer, and the rules for each of them.
-                  </li>
-                </ol>
-              </Paragraph>
-            </Box>
-          </Box>
+            <Paragraph>
+              The original motivation for working on the composer was to make content creation more lightweight. 
+              What does it mean to be lightweight? Currently, adding an image requires 3 clicks 
+              and every post requires both a title and a body. 
+              In this vein, lightweight means making it easier to add short posts and image-based content.
+              <br /><br />
+              However, it is not clear how to add images and short posts. 
+              What was the existing state of content types? 
+              <ol>
+                <li><Strong>Confusing content types</Strong>
+                  <br />
+                  Each content type has its own rules and they are not mutually exclusive. For example, you can add a link to a post
+                  or add a link by itself. They have different rules, render differently, and it was not clear to users when to use each type. 
+                </li>
+                <li><Strong>Too many types constantly slowed us down</Strong>
+                  <br />
+                    At the start of this project, there were four distinct content types. 
+                    Whenever we wanted to change or add something,
+                    we had to design it, build it, and figure out ML models four times.
+                </li>
+                <li><Strong>Bias towards formal, long-form content</Strong>
+                  <br />
+                  Quora's emphasis has always been on long-form content, questions, and answers. However, with higher context of people
+                  contributing within Spaces – we should allow shorter, easier to produce content to thrive. 
+                  Asking and answering questions on Quora is already relatively intimidating – 
+                  now there is added complexity with users needing to understand the difference between a question, a post, 
+                  a link, a share, and an answer, and the rules for each of them.
+                </li>
+              </ol>
+            </Paragraph>
+          </RegularWidth>
           <Box>
             <Image src="/images/composer-state.png" />
             <Footer>
@@ -106,7 +105,7 @@ function Composer() {
 
       <Section>
         <Container>
-          <Box width={["100%", "85%"]} mx="auto">
+          <RegularWidth>
             <Heading3>
               The Solution: Reducing to Posts & Questions
             </Heading3>
@@ -123,7 +122,7 @@ function Composer() {
                 Here is a quick overview of the final composer – 
               </Paragraph>
             </Box>
-          </Box>
+          </RegularWidth>
           <Box mt="large">
             <Image src="/images/composer-final.png" />
             <Footer>
@@ -134,7 +133,7 @@ function Composer() {
       </Section>
       <Section backgroundColor="bg_alt">
         <Container>
-          <Box width={["100%", "85%"]} mx="auto" mt="huge">
+          <RegularWidth>
             <Heading3>
             Design Decisions & Details
             </Heading3>
@@ -148,7 +147,7 @@ function Composer() {
               keeping them to be one unified experience in the front-end, even if the backend is different.
               <br />
             </Paragraph>
-          </Box>
+          </RegularWidth>
           <Box mb="small">
             <Flex>
               <Box mr="large"><Image src="/images/post-and-link.png" /></Box>
@@ -159,7 +158,7 @@ function Composer() {
               Right: Solution to consolidate Link and Post experiences
             </Footer>
           </Box>
-          <Box width={["100%", "85%"]} mx="auto" mt="huge">
+          <RegularWidth mt="huge">
             <Subheading>
               Enabling switching between questions and posts
             </Subheading>
@@ -173,7 +172,7 @@ function Composer() {
               In order to help users bail out of adding a post and help them ask a question instead I designed this case to more 
               easily transform your post into a question. We think this will also help mitigate a potential loss of questions asked in Spaces. 
             </Paragraph>
-          </Box>
+          </RegularWidth>
           <Box>
             <Flex>
               <Box><Image src="/images/question-switching.png" /></Box>
@@ -182,7 +181,7 @@ function Composer() {
               Above: If you type a question mark, the composer asks if you'd like to switch to adding a question instead
             </Footer>
           </Box>
-          <Box width={["100%", "85%"]} mx="auto" mt="huge">
+          <RegularWidth mt="huge">
             <Subheading>
               De-emphasizing formatting
             </Subheading>
@@ -196,7 +195,7 @@ function Composer() {
               content itself.
               <br />
             </Paragraph>
-          </Box>
+          </RegularWidth>
           <Box>
             <Flex>
               <Box mr="small"><Image src="/images/original-toolbar.png" /></Box>
@@ -207,25 +206,32 @@ function Composer() {
               Right: solution to combine all formatting into one menu
             </Footer>
           </Box>
-          <Box width={["100%", "85%"]} mx="auto" mt="huge">
-            <Subheading>
-              Default to adding posts without titles
-            </Subheading>
-            <Flex>
-              <Box mr="large">
-                <Paragraph>
-                  Having a title makes content feel more formal and that friction may reduce content added. 
-                  However, we don't want to remove titles in the product. For example, there are 
-                  Spaces that are effectively used as blogs, for which it is important to allow adding a title. 
-                  <br /><br />
-                  Here, I tried de-emphasizing the importance of titles, but still providing a way to add titles 
-                  when needed.
-                </Paragraph>
-              </Box>
-              <Box width="95%" ml="large"><Image src="/images/title-adding.png" /></Box>
-            </Flex>
-          </Box>
-          <Box width={["100%", "85%"]} mx="auto" mt="huge">
+          <RegularWidth>
+            <MainAndSecondaryGrid mt="huge"
+              main={
+                <>
+                  <Subheading>
+                    Default to adding posts without titles
+                  </Subheading>
+                  <Paragraph>
+                    Having a title makes content feel more formal and that friction may reduce content added. 
+                    However, we don't want to remove titles in the product. For example, there are 
+                    Spaces that are effectively used as blogs, for which it is important to allow adding a title. 
+                    <br /><br />
+                    Here, I tried de-emphasizing the importance of titles, but still providing a way to add titles 
+                    when needed.
+                  </Paragraph>
+                </>
+              }
+              mainWidth={0.7}
+              secondary={
+                <Box>
+                  <Image src="/images/title-adding.png" />
+                </Box>
+              }
+            />
+          </RegularWidth>
+          <RegularWidth mt="huge">
             <Subheading>
               Clipboard detection for links
             </Subheading>
@@ -241,8 +247,8 @@ function Composer() {
             <Footer mt="tiny">
               Above: If the composer detects a link on your clipboard, it shows a preview of it
             </Footer>
-          </Box>
-          <Box width={["100%", "85%"]} mx="auto" mt="huge">
+          </RegularWidth>
+          <RegularWidth mt="huge">
             <Subheading>
               Easier image handling
             </Subheading>
@@ -254,7 +260,7 @@ function Composer() {
               <br /><br />
               In my solution, I used a close button and added an image gallery to support add images with one-click.
             </Paragraph>
-          </Box>
+          </RegularWidth>
           <Box>
             <Flex>
               <Box mr="medium"><Image src="/images/old-image-adding.png" /></Box>
@@ -265,7 +271,7 @@ function Composer() {
               Right: Adding an image with 1 click, using mobile-friendly buttons to remove images
             </Footer>
           </Box>
-          <Box width={["100%", "85%"]} mx="auto" mt="huge">
+          <RegularWidth mt="huge">
             <Subheading>
               PROTOTYPE: PROCEED WITH CAUTION
             </Subheading>
@@ -289,12 +295,12 @@ function Composer() {
               width="375" height="715" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Faw3MvuC2eNf2YQaIFKN1LQ%2FLWC-Composer-Q1-Q2-2020%3Fnode-id%3D155%253A3769%26viewport%3D-935%252C-469%252C0.2638188898563385%26scaling%3Dmin-zoom&chrome=DOCUMENTATION"
               allowfullscreen></iframe>
             </Box>
-          </Box>
+          </RegularWidth>
         </Container>
       </Section>
       <Section>
         <Container>
-          <Box width={["100%", "85%"]} mx="auto">
+          <RegularWidth>
             <Heading3>
               Other Explorations
             </Heading3>
@@ -303,7 +309,7 @@ function Composer() {
                   
               </Paragraph>
             </Box>
-          </Box>
+          </RegularWidth>
           <Box mt="large" mx="auto" width="75%">
             <Image src="/images/option-select-composer.png" />
             <Footer>
@@ -330,7 +336,7 @@ function Composer() {
 
       <Section backgroundColor="bg_alt">
         <Container>
-          <Box width={["100%", "85%"]} mx="auto">
+          <RegularWidth>
             <Heading3>
               Future Work: Bringing Q&A-like Dynamics to Posts
             </Heading3>
@@ -339,10 +345,7 @@ function Composer() {
                 Coming soon
               </Paragraph>
             </Box>
-          </Box>
-          <Box mt="large">
-            
-          </Box>
+          </RegularWidth>
         </Container>
       </Section>
     </>

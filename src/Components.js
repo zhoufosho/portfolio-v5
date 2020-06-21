@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Flex, Heading, Text, Image, Button, Link } from "rebass";
+import { Heading, Text, Image, Button, Link } from "rebass";
+import { Flex, Box } from "reflexbox"
 import { Label, Input } from "@rebass/forms"
 
 
@@ -140,6 +141,44 @@ export const Section = ({ children, ...restProps }) => {
     </Box>
   );
 };
+
+export const MainAndSecondaryGrid = ({ main, mainWidth, secondary, ...restProps}) => {
+  const secondaryWidth = 1 - mainWidth
+
+  return (
+    <Flex 
+      {...restProps}
+      flexWrap="wrap"
+    >
+      <Box 
+        width={[1, mainWidth]}
+        pr={[0, "large"]}
+      >
+        {main}
+      </Box>
+      <Box 
+        width={[1, secondaryWidth]}
+        pl={[0, "large"]}
+        mt={["medium", 0]}
+      >
+        {secondary}
+      </Box>
+    </Flex>
+  );
+};
+
+export const RegularWidth = ({ children, ...restProps }) => {
+  return (
+    <Box 
+      {...restProps}
+      width={["100%", "85%"]}
+      mx="auto"
+    >
+      {children}
+    </Box>
+  );
+};
+
 
 export const InputField = props => {
   return (
