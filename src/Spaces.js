@@ -1,8 +1,10 @@
 import React from 'react';
-import { Box, Button, Text, Flex, Image } from "rebass";
+import { Button, Text, Image, Link } from "rebass";
+import { Flex, Box } from "reflexbox"
 import { Heading1, Subheading, Heading2, Heading3, 
-  Paragraph, Container, Section, Strong, Footer, SiteHeader, Italic, 
-  StyledLink } from "./Components";
+  Paragraph, Container, Section, Strong, Footer, SiteHeader,
+  StyledLink, MainAndSecondaryGrid, RegularWidth
+} from "./Components";
 
 function Spaces() {
   return (
@@ -14,8 +16,8 @@ function Spaces() {
             <Heading2 mb="large">
               Launching & Scaling Spaces
             </Heading2>
-            <Flex>
-              <Box mr="large" width={["80%", "70%"]}>
+            <MainAndSecondaryGrid
+              main={
                 <Paragraph>
                   As Quora has scaled, it became more difficult to ask questions 
                   and get satisfactory answers. We believed this was due to 
@@ -36,8 +38,9 @@ function Spaces() {
                   The largest space has <Strong>>1M followers</Strong> (by comparison, the most followed user has ~500K followers). 
                   Users click on ~2M notifications about Spaces each week.
                 </Paragraph>
-              </Box>
-              <Box ml="large" width={["100%", "30%"]}>
+              }
+              mainWidth={0.75}
+              secondary={
                 <Text variant="subtext">
                   I’ve been leading product design (vision, design, aligning, scoping, writing code) on Spaces since 2018, 
                   with projects in between. <br /><br />
@@ -52,8 +55,8 @@ function Spaces() {
                   responsible for identifying opportunities for design impact, 
                   maintaining cross-functional coordination and alignment, and some IC work.
                 </Text>
-              </Box>
-            </Flex>
+              }
+            />
           </Box>
         </Container>
       </Section>
@@ -61,7 +64,7 @@ function Spaces() {
 
       <Section backgroundColor="bg_alt">
         <Container>
-          <Box width={["100%", "85%"]} mx="auto">
+          <RegularWidth>
             <Heading3>
               Hidden Context 
             </Heading3>
@@ -75,7 +78,7 @@ function Spaces() {
                 How might we <Strong>prevent context collapse</Strong> to more effectively share knowledge?<br /><br />
               </Paragraph>
             </Box>
-          </Box>
+          </RegularWidth>
           <Box mb="large">
             <Flex>
               <Box><Image src="/images/irrelevant-answers.png" /></Box>
@@ -86,14 +89,14 @@ function Spaces() {
               Right: Askers specify context for their question (e.g. repeating the name of a video game)
             </Footer>
           </Box>
-          <Box mb="huge" width={["100%", "85%"]} mx="auto">
+          <RegularWidth>
             <Box><Image src="/images/math-topic-page-2.png" /></Box>            
             <Footer>
               Above: Topic pages were becoming difficult to navigate – they had no visible goals
               <br /> and so many different contexts appearned on the same page
             </Footer>
-          </Box>
-          <Box width={["100%", "85%"]} mx="auto">
+          </RegularWidth>
+          <RegularWidth>
             <Paragraph>
               Context collapse affects the experience of many personas, which limits the success of the platform.
                 <ul>
@@ -123,13 +126,13 @@ function Spaces() {
                   <Heading3>Does aloe vera help with sunburn?</Heading3>
                 </Box>
               </Paragraph>
-            </Box>
+            </RegularWidth>
         </Container>
       </Section>
 
       <Section>
         <Container>
-          <Box width={["100%", "85%"]} mx="auto">
+          <RegularWidth>
             <Heading3>
               The Solution: Spaces (aka User-Defined Channels and Communities)
             </Heading3>
@@ -151,21 +154,21 @@ function Spaces() {
               we determined the best way forward was none of these. Instead, we needed to create
               something where <Strong>users define the boundaries</Strong>. Hence, we ended up building Spaces.
               </Paragraph>
-          </Box>
+          </RegularWidth>
           <Box mb="huge" mt="large">
             <Box mb="medium"><Image src="/images/space-anatomy.png" /></Box>
             <Footer>
               Above: Anatomy of a space with general characteristics<br />
             </Footer>
           </Box>
-          <Box width={["100%", "85%"]} mx="auto">
+          <RegularWidth width={["100%", "85%"]} mx="auto">
             <Paragraph>
               Although we initially imagined Spaces to be for an explicit groups/community use case, we realized that these same boundary problems
               existed for many other types of readers and writers (e.g. someone trying to start a brand, or curate existing content). 
               We found that some variation of Spaces could help them achieve their goals of sharing knowledge more effectively. <br /><br />
               Our goal is for Spaces to be flexible to a variety of use cases and scales. Here are some examples of Spaces that exist today –
             </Paragraph>
-          </Box>
+          </RegularWidth>
           <Box mb="huge">
             <Box mb="medium"><Image src="/images/space-sampling.png" /></Box>
             <Footer>
@@ -179,7 +182,7 @@ function Spaces() {
 
       <Section backgroundColor="bg_alt" id="roles">
         <Container>
-          <Box width={["100%", "85%"]} mx="auto">
+          <RegularWidth>
             <Heading3>
               Roles & Permissions: Setting Group Expectations 
             </Heading3>
@@ -227,13 +230,13 @@ function Spaces() {
                 amongst various people managing the Space
               </Footer>
             </Box>
-          </Box>
+          </RegularWidth>
         </Container>
       </Section>
 
       <Section>
         <Container>
-          <Box width={["100%", "85%"]} mx="auto">
+          <RegularWidth>
             <Heading3>
               Leveraging Posts: Moving beyond Q&A
             </Heading3>
@@ -256,7 +259,7 @@ function Spaces() {
                 posts and links respectively made up <Strong>60%</Strong> and <Strong>12%</Strong> of content added to Spaces. <br /><br />
               </Paragraph>
             </Box>
-          </Box>
+          </RegularWidth>
           <Box>
             <Box><Image src="/images/content-types.png" /></Box>
             <Footer>
@@ -269,7 +272,7 @@ function Spaces() {
       
       <Section backgroundColor="bg_alt" id="notifs">
         <Container>
-          <Box width={["100%", "85%"]} mx="auto">
+          <RegularWidth>
             <Heading3>
               Notifications & Feed: Surfacing the Best Content, in Real-Time
             </Heading3>
@@ -295,7 +298,7 @@ function Spaces() {
                   Sorting the space page increased space content added by ~25%.
               </Paragraph>
             </Box>
-          </Box>
+          </RegularWidth>
           <Box mt="large">
             <Flex alignSelf="center">
               <Box><Image src="/images/notif-picker.png" /></Box>
@@ -305,9 +308,9 @@ function Spaces() {
               Left: By default, users receive highlight notifs trained by machine learning models. Users can change their notification frequency.<br />
               Right: By default, the Top sort surfaces the best content based on audience votes. Users can change their default to Recent for real-time updates
             </Footer>
-            <Box mx="auto" width="70%">
-              <Box><Image src="/images/notif-injection.png" /></Box>
-            </Box>
+          </Box>
+          <Box mx="auto" width={0.7} pt="large">
+            <Box><Image src="/images/notif-injection.png" /></Box>
             <Footer>
               Above: By injecting the notification at the top of the Space page after clicking through, Space page active minutes increased ~90%.
             </Footer>
@@ -318,7 +321,7 @@ function Spaces() {
 
       <Section>
         <Container>
-          <Box width={["100%", "85%"]} mx="auto">
+          <RegularWidth>
             <Heading3>
               Space Questions: Bounding Context
             </Heading3>
@@ -327,7 +330,7 @@ function Spaces() {
                 
               </Paragraph>
             </Box>
-          </Box>
+          </RegularWidth>
           <Box mt="large">
             <Flex>
               <Box alignSelf="center" width="100%"><Image src="/images/questions-in-space.png" /></Box>
@@ -343,12 +346,12 @@ function Spaces() {
 
       <Section id="submissions" backgroundColor="bg_alt">
         <Container>
-          <Box width={["100%", "85%"]} mx="auto">
+          <RegularWidth>
             <Heading3> 
               Submissions: Increasing Content and Potential Contributors  
             </Heading3>
-            <Flex alignSelf="center">
-              <Box width={["auto"]}>
+            <MainAndSecondaryGrid
+              main={
                 <Paragraph>
                   Unlike most groups products, Spaces has very strong in-/out- group dynamics. 
                   After launching, I realized the restriction on content contribution was one of the 
@@ -370,25 +373,27 @@ function Spaces() {
                     <li>Long term, increase number of regular contributors to Spaces </li>
                     <li>Enable moderators and admins to find more engaged and qualified contributors </li>
                   </ul>
+                  <br />
+                  <Strong>Impact</Strong>: ~25% of spaces content today comes from Submissions
                 </Paragraph>
-                <Paragraph>
-                <Strong>Impact</Strong>: ~25% of spaces content today comes from Submissions
-                </Paragraph>
-                </Box>
-                <Box>
-                  <Box ml="large"><Image src="/images/submissions.png" /></Box>
+              }
+              mainWidth={0.65}
+              secondary={
+                <Box alignSelf="center">
+                  <Box><Image src="/images/submissions.png" /></Box>
                   <Footer>
                     Above: admin/moderator view for handling submissioins
                   </Footer>
                 </Box>
-            </Flex>
-          </Box>
+              }
+            />
+          </RegularWidth>
         </Container>
       </Section>
 
       <Section>
         <Container>
-          <Box width={["100%", "85%"]} mx="auto">
+          <RegularWidth>
             <Heading3> 
               Suggestions: Augmenting with Content from Other Sources
             </Heading3>
@@ -442,7 +447,7 @@ function Spaces() {
                 <br /><br />
               </Paragraph>
             </Box>
-          </Box>
+          </RegularWidth>
           <Box>
             <Flex alignSelf="center">
               <Box><Image src="/images/suggestions-answer.png" /></Box>

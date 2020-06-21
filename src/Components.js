@@ -4,7 +4,7 @@ import { Flex, Box } from "reflexbox"
 import { Label, Input } from "@rebass/forms"
 
 
-const FULL_WIDTH = 1000;
+const FULL_WIDTH = 1032;
 const TEMP_PW = "mochi";
 
 export const Heading1 = props => {
@@ -55,8 +55,8 @@ export const Footer = ({ children, ...restProps }) => {
 
 export const SiteHeader = ({ children, ...restProps }) => {
   return (
-    <Container mt="large">
-      <Paragraph mt="small" px="medium">
+    <Container pt={["xlarge", "xxlarge"]}>
+      <Paragraph>
         <Link href="/" sx={{
           ":hover": {
             fontWeight: "bold",
@@ -66,8 +66,6 @@ export const SiteHeader = ({ children, ...restProps }) => {
         elaine
         </Link>
       </Paragraph>
-
-      
     </Container>
   );
 };
@@ -115,12 +113,9 @@ export const Container = ({ children, ...restProps }) => {
   return (
     <Box 
       {...restProps}
-      sx={{
-        maxWidth: FULL_WIDTH,
-        mx: "auto",
-        px: "medium",
-        py: "large",
-      }}
+      maxWidth={FULL_WIDTH}
+      mx="auto"
+      px="xlarge"
     >
       {children}
     </Box>
@@ -131,11 +126,8 @@ export const Section = ({ children, ...restProps }) => {
   return (
     <Box 
       {...restProps}
-      sx={{
-        boxSizing: "content-box",
-        px: "medium",
-        py: "huge",
-      }}
+      boxSizing="content-box"
+      py={["xxlarge", "huge"]}
     >
       {children}
     </Box>

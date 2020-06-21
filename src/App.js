@@ -12,8 +12,8 @@ function Router() {
       return <Composer />
       // return <PrivatePage component={Composer} />
     case "/spaces":
-      // return <Spaces />
-      return <PrivatePage component={Spaces} />
+      return <Spaces />
+      // return <PrivatePage component={Spaces} />
     case "/dogfooding":
       return <Dogfooding />
     default:
