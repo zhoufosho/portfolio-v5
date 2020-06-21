@@ -14,6 +14,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "rebass": "^4.0.7",
+    "reflexbox": "^4.0.6",
     "sass": "^1.26.5",
     "theme-ui": "^0.3.1",
     "typescript": "^3.9.3",
