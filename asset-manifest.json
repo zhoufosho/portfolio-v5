@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/portfolio-v5/static/css/main.613b65dc.chunk.css",
+    "main.js": "/portfolio-v5/static/js/main.1b169d19.chunk.js",
+    "main.js.map": "/portfolio-v5/static/js/main.1b169d19.chunk.js.map",
+    "runtime-main.js": "/portfolio-v5/static/js/runtime-main.ae72296a.js",
+    "runtime-main.js.map": "/portfolio-v5/static/js/runtime-main.ae72296a.js.map",
+    "static/js/2.eb90beb6.chunk.js": "/portfolio-v5/static/js/2.eb90beb6.chunk.js",
+    "static/js/2.eb90beb6.chunk.js.map": "/portfolio-v5/static/js/2.eb90beb6.chunk.js.map",
+    "index.html": "/portfolio-v5/index.html",
+    "precache-manifest.8b78031268562275d19e148ee7bd68b6.js": "/portfolio-v5/precache-manifest.8b78031268562275d19e148ee7bd68b6.js",
+    "service-worker.js": "/portfolio-v5/service-worker.js",
+    "static/css/main.613b65dc.chunk.css.map": "/portfolio-v5/static/css/main.613b65dc.chunk.css.map",
+    "static/js/2.eb90beb6.chunk.js.LICENSE.txt": "/portfolio-v5/static/js/2.eb90beb6.chunk.js.LICENSE.txt",
+    "static/media/Karla-Bold.ttf": "/portfolio-v5/static/media/Karla-Bold.c07c916c.ttf",
+    "static/media/Karla-Italic.ttf": "/portfolio-v5/static/media/Karla-Italic.740dfd33.ttf",
+    "static/media/Karla-Regular.ttf": "/portfolio-v5/static/media/Karla-Regular.1b55fee6.ttf",
+    "static/media/PTMono-Regular.ttf": "/portfolio-v5/static/media/PTMono-Regular.0c6b8e07.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ae72296a.js",
+    "static/js/2.eb90beb6.chunk.js",
+    "static/css/main.613b65dc.chunk.css",
+    "static/js/main.1b169d19.chunk.js"
+  ]
+}
