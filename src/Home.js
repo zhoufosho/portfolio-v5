@@ -9,7 +9,7 @@ const Projects = [
     name: "Simplifying Content Creation",
     desc: "Reducing complexity and enabling lightweight content",
     color: "accent",
-    image: "/images/rounded-composer.png",
+    image: "images/rounded-composer.png",
     url: "/composer",
     subheading: "2020 – present · Quora",
     subheading_color: "purple",
