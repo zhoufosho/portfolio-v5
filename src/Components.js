@@ -1,7 +1,7 @@
 import React from "react";
-import { Heading, Text, Image, Button, Link } from "rebass";
+import { Text, Image, Link } from "rebass";
 import { Flex, Box } from "reflexbox"
-import { Label, Input } from "@rebass/forms"
+import { Input } from "@rebass/forms"
 
 import {PRIVATE_PAGE_KEY} from "./App"
 const FULL_WIDTH = 1032;

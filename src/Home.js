@@ -1,8 +1,8 @@
 import React from 'react';
-import { Button, Text, Image, Link } from "rebass";
+import { Image, Link } from "rebass";
 import { Flex, Box } from "reflexbox"
 import { Heading1, Subheading, Heading2, Heading3, Heading4, 
-  Paragraph, Container, Section, Footer } from "./Components";
+  Container, Section, Footer } from "./Components";
 
 const Projects = [
   {

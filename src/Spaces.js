@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button, Text, Image, Link } from "rebass";
+import { Text, Image } from "rebass";
 import { Flex, Box } from "reflexbox"
-import { Heading1, Subheading, Heading2, Heading3, 
+import { Subheading, Heading2, Heading3, 
   Paragraph, Container, Section, Strong, Footer, SiteHeader,
   StyledLink, MainAndSecondaryGrid, RegularWidth
 } from "./Components";

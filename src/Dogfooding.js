@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Button, Text, Flex, Image } from "rebass";
-import { Heading1, Subheading, Heading2, Heading3, Paragraph, Container, Section, Strong, Footer, SiteHeader } from "./Components";
+import { Box } from "rebass";
+import { Heading2, Paragraph, Container, Section, SiteHeader } from "./Components";
 
 function Dogfooding() {
   return (

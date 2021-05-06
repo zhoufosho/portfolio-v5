@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button, Text, Image, Link } from "rebass";
+import { Text, Image } from "rebass";
 import { Flex, Box } from "reflexbox"
-import { Heading1, Subheading, Heading2, Heading3, 
+import { Subheading, Heading2, Heading3, 
   Paragraph, Container, Section, Strong, Footer, SiteHeader,
   StyledLink, MainAndSecondaryGrid, RegularWidth
 } from "./Components";
@@ -287,13 +287,16 @@ function Composer() {
 
             {/* negative margins on mobile to be flush */}
             <Box mt="large" mx={["-25px", "auto"]}>
-              <iframe frameBorder="0" style={{ 
-                display: 'block',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-              }}
-              width="375" height="715" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Faw3MvuC2eNf2YQaIFKN1LQ%2FLWC-Composer-Q1-Q2-2020%3Fnode-id%3D155%253A3769%26viewport%3D-935%252C-469%252C0.2638188898563385%26scaling%3Dmin-zoom&chrome=DOCUMENTATION"
-              allowfullscreen></iframe>
+              <iframe 
+                title="figma-prototype"
+                frameBorder="0" 
+                style={{ 
+                  display: 'block',
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
+                }}
+                width="375" height="715" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Faw3MvuC2eNf2YQaIFKN1LQ%2FLWC-Composer-Q1-Q2-2020%3Fnode-id%3D155%253A3769%26viewport%3D-935%252C-469%252C0.2638188898563385%26scaling%3Dmin-zoom&chrome=DOCUMENTATION"
+                allowfullscreen></iframe>
             </Box>
           </RegularWidth>
         </Container>
