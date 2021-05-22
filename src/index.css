@@ -55,7 +55,7 @@ li {
 @font-face {
   font-family: 'Tiempos-Headline';
   src: local('Tiempos-Headline'),
-    url(./fonts/TiemposFine-Black.otf) format('opentype');
+    url(./fonts/TiemposHeadline-Black.otf) format('opentype');
 }
 @font-face {
   font-family: 'Tiempos-Text-Semibold';
