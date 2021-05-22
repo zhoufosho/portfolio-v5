@@ -4,7 +4,7 @@ import { Flex, Box } from "reflexbox"
 import { Input } from "@rebass/forms"
 
 import {PRIVATE_PAGE_KEY} from "./App"
-const FULL_WIDTH = 1032;
+const FULL_WIDTH = 880;
 
 
 export const Heading1 = props => {
@@ -133,7 +133,7 @@ export const Section = ({ children, ...restProps }) => {
     <Box 
       {...restProps}
       boxSizing="content-box"
-      py={["xxlarge", "huge"]}
+      py={["xxlarge"]}
     >
       {children}
     </Box>

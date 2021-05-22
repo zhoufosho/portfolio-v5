@@ -2,7 +2,7 @@
 export default {
   fontSizes: {
     small: 13, 
-    regular: 16, 
+    regular: 18, 
     large: 20,
     xlarge: 24, 
     xxlarge: 32, 
@@ -18,6 +18,11 @@ export default {
     purple: "#733F5D",
     secondary: "#666666",
     muted: "#999999",
+    gray_ultradark: "#32323C",
+    gray_dark: "#737680",
+    gray_medium: "#B8BABF",
+    gray_light: "#E2E5EA",
+    gray_ultralight: "#F6F8FA",
   },
   space: {
     tiny: 5, 
@@ -31,14 +36,16 @@ export default {
   },
   fonts: {
     body: "Karla-Regular, system-ui, sans-serif",
-    heading: "Karla-Bold, system-ui, sans-serif",
+    heading: "Tiempos-Text-Semibold, system-ui, sans-serif",
+    title: "Tiempos-Headline, system-ui, sans-serif",
     monospace: "PTMono-Regular, monospace"
   },
   fontWeight: {
     bold: "600",
   },
   lineHeights: {
-    body: 1.8,
+    body: 1.7,
+    small_heading: 1.5,
     heading: 1.2,
     huge_heading: 0.95,
   },
@@ -55,7 +62,7 @@ export default {
   },
   text: {
     heading: {
-      fontFamily: "heading",
+      fontFamily: "title",
       color: "primary",
       fontSize: ["xlarge", "xxlarge", "giant"],
       mt: "medium",
@@ -69,9 +76,9 @@ export default {
       lineHeight: "1.4",
     },
     heading2: {
-      color: "primary",
-      fontSize: ["large", "xlarge", "xxlarge"],
       fontFamily: "heading",
+      color: "primary",
+      fontSize: ["large", "xlarge"],
       mb: "small",
     },
     heading3: {
@@ -81,10 +88,11 @@ export default {
       mb: "medium",
     },
     heading4: {
-      color: "primary",
+      color: "gray_dark",
       fontSize: ["medium", "large"],
       fontFamily: "body",
       mb: "medium",
+      lineHeight: "small_heading"
     },
     body: {
       fontFamily: "body",
