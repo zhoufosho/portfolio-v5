@@ -68,7 +68,7 @@ export default {
     heading: {
       fontFamily: "title",
       color: "primary",
-      fontSize: ["xlarge", "xxlarge", "giant"],
+      fontSize: ["xxlarge", "giant"],
       mt: "medium",
       mb: "small",
       lineHeight: ["heading", "huge_heading"]
