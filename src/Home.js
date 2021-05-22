@@ -51,16 +51,17 @@ function Home() {
       {Projects.map((project, index) => 
         (<Section>
           <Link href={project.url}>
-            <Box 
-            className="hoverBox"
-            sx={{
-              ":hover": {
-                transform: "translate(-2px, -2px)"
-              },
-              "cursor": !project.url && "not-allowed"
-            }}>
+            <Box>
               <Container>
-                <Box mx="auto" mb="small">
+                <Box 
+                mx="auto" mb="small" 
+                className="hoverBox"
+                sx={{
+                  ":hover": {
+                    transform: "translate(-2px, -2px)"
+                  },
+                  "cursor": !project.url && "not-allowed"
+                }}>
                   <Box mb="large"> 
                     <Image src={project.image} />
                   </Box>
