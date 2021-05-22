@@ -55,10 +55,10 @@ li {
 @font-face {
   font-family: 'Tiempos-Headline';
   src: local('Tiempos-Headline'),
-    url(./fonts/TiemposHeadlineTest-Black.otf) format('opentype');
+    url(./fonts/TiemposFine-Black.otf) format('opentype');
 }
 @font-face {
   font-family: 'Tiempos-Text-Semibold';
   src: local('Tiempos-Text-Semibold'),
-    url(./fonts/TiemposTextTest-Semibold.otf) format('opentype');
+    url(./fonts/TiemposHeadline-Semibold.otf) format('opentype');
 }
