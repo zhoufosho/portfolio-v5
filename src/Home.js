@@ -38,7 +38,7 @@ function Home() {
               You’ll often find me talking with my hands. 
               <br /><br />
               
-              <em>Currently:</em> freelancing<br />
+              Currently: freelancing<br />
               Previously: Design Lead & Manager at Quora. 
               
             </Paragraph>
