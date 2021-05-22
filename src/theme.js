@@ -25,6 +25,10 @@ export default {
     gray_ultralight: "#F6F8FA",
   },
   space: {
+    n_large: -20,
+    n_medium: -15,
+    n_small: -10,
+    n_tiny: -5,
     tiny: 5, 
     small: 10,
     medium: 15,

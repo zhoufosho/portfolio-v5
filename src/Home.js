@@ -8,7 +8,7 @@ const Projects = [
   {
     name: "Simplifying content creation",
     desc: "Reducing complexity and enabling lightweight content",
-    color: "accent",
+    color: "#E8EAFF",
     image: "images/composer-preview.png",
     url: "/composer",
     subheading: "2020 · Quora",
@@ -17,7 +17,7 @@ const Projects = [
   {
     name: "Launching and scaling Spaces",
     desc: "Creating an engagement-driven product loop",
-    color: "white",
+    color: "#FFECE5",
     image: "images/spaces-preview.png",
     url: "/spaces",
     subheading: "2018 – 2020 · Quora",
@@ -32,15 +32,14 @@ function Home() {
         <Container pt="25vh">
           <Heading1>i'm elaine</Heading1>
           <Box width="70%">
-            <Paragraph>
+            <Paragraph mt="medium">
               I love working in complex problem spaces to create simple solutions. 
               I enjoy making diagrams and collaborating with others to drive insights.
               You’ll often find me talking with my hands. 
-              <br /><br />
-              
-              Currently: freelancing<br />
-              Previously: Design Lead & Manager at Quora. 
-              
+            </Paragraph>
+            <Paragraph mt="medium">
+              Currently: Freelancing<br />
+              Previously: Design Lead & Manager at Quora
             </Paragraph>
           </Box>
           <Paragraph>
@@ -52,9 +51,11 @@ function Home() {
       {Projects.map((project, index) => 
         (<Section>
           <Link href={project.url}>
-            <Box sx={{
+            <Box 
+            className="hoverBox"
+            sx={{
               ":hover": {
-                transform: "translate(-4px, -4px)"
+                transform: "translate(-2px, -2px)"
               },
               "cursor": !project.url && "not-allowed"
             }}>
@@ -64,6 +65,20 @@ function Home() {
                     <Image src={project.image} />
                   </Box>
                   <Heading2>{project.name}</Heading2>
+                  <Box 
+                    className="hoverBoxColorStrip"
+                    marginTop="n_large"
+                    marginLeft="n_tiny"
+                    height="10px"
+                    display="none"
+                    style={{
+                      position: "absolute",
+                      zIndex: "-1",
+                      backgroundColor: project.color,
+                      width: "70%",
+                      maxWidth: "360px",
+                    }}
+                  /> 
                   <Paragraph>{project.desc}</Paragraph>                  
                   <Subheading>
                     {project.subheading}
@@ -75,7 +90,7 @@ function Home() {
         </Section>)
       )}
       <Box py="xlarge">
-        <Footer>made by elaine </Footer>
+        <Footer>made  </Footer>
       </Box>
     </>
   );

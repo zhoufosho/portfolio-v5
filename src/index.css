@@ -20,6 +20,16 @@ li {
   margin-bottom: 10px;
 }
 
+.hoverBox:hover .hoverBoxColorStrip {
+  display: block;
+}
+
+::selection {
+  background: #FFF8E4; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #FFF8E4; /* Gecko Browsers */
+}
 
 @font-face {
   font-family: "Karla-Regular";
