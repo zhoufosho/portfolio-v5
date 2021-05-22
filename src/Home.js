@@ -90,7 +90,7 @@ function Home() {
         </Section>)
       )}
       <Box py="xlarge">
-        <Footer>made  </Footer>
+        <Footer>made by elaine · 2021 </Footer>
       </Box>
     </>
   );
